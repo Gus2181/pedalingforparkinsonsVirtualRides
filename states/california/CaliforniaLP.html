@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>California</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    margin-left: 25px;
+}
+div.top{
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;    
+}
+div.imgR{
+    width: 300px;
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 25px;
+    margin-top: 25px;
+    overflow: hidden;    
+}
+div.r{
+    background-color: lightgray;
+    margin-left: 50px;
+    border: 25px solid #333;
+    color: #333;
+    padding: 15px;
+    width: 35%;
+}
+.indent{
+    margin-left: 25px;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+}
+li.nav{
+    float: left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.don{
+    background-color: #5B676D;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+li a.d, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a.d:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.d{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+a.list{
+    color: black;
+    text-decoration: none;
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    margin-right: 25px;
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0";
+}
+</script>
+
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a class = "d" href = "./../ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "./../washington/WashingtonLP.html">Washington</a>
+        <a class = "d" href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<h1>California</h1>
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<div class = "top">
+    <div class = "imgL" style = "width: 50%; margin: 20px 10px 20px 0"><img src = "pic/redwoods.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 45%; margin: 20px 0 20px 10px"><p>Welcome to the state of California! California is known for its pristine land, massive coastline,
+    beautiful land, and cities such as Los Angeles.
+    <br /><br />
+    The state originally was inhabited by an extremely diverse group of Native Americans, with over 70 distinct ethnic groups of natives. The land would later be under Spanish
+    rule, and transferred to Mexico after the Mexican War of Independence. It would again change hands, being awarded to the United States after the Mexican-American War ended in
+    1848. Regarding the treatment of natives during this time, the population decreased significantly, as European settlers carried diseased with them that natives had no immunity to.
+    When California came under American rule, the government began forcing indigenous people out, and though California entered the nation as a free state, they would make Native Americans
+    de-facto slaves.
+    <br /><br />
+    Today, California is the most populated state in the country, and has had huge influences on pop culture. Hollywood, as well as the rest of Los Angeles, is considered a global center for
+    entertainment. Five of the largest film studios, Columbia, Disney, Paramount, Universal, and Warner Bros., are all located in or around this area. In addition to that, television networks
+    such as ABC, CBS, Fox, and NBC, along with Spansih-language broadcasting networks such as Univision and Telemundo all have large production offices in the Hollywood area (all information
+    courtesy of <a href = "https://en.wikipedia.org/wiki/California">Wikipedia.com</a>, image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Redwood_National_Park,_fog_in_the_forest.jpg" title="via Wikimedia Commons">Michael Schweppe</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA</a>
+    ).
+    </p></div>
+</div>
+
+<h2>Routes:</h2>
+<div class = "r">
+<ul class = "indent">
+    <li>There are no routes here... yet!</li>
+</ul>
+</div>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "button" onclick = "window.print()">Print this page</button>
+</p>
+
+</div>
+</body>
+</html>

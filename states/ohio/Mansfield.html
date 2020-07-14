@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Mansfield</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "OhioLP.html">Ohio</a>
+        <a href = "./../washington/WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial">Checkpoint: Mansfield</h1>
+
+<div class = "top">
+    <div class = "imgL" style = "width: 45%; margin: 25px 10px 25px 0"><img src = "pic/Mansfield.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width:50%; margin: 60px 10px 50px 0"><p>Welcome to Mansfield, Ohio! This town was laid out in 1808, as a settlement, and was named for the man
+    who directed its planning, Colonel Jared Mansfield. It became incorporated as a village in 1828, and finally as a city in 1857. By 1890, the town's
+    population had increased drastically, and it had become a hub for manufacturing and trading, in part thanks to the 4 railroads that passed through. During
+    this time, dozens of manufacturing businesses opened during this time, producing commodities such as doors, brass objects, suspenders, boxes, linseed oil,
+    as well as other items. The biggest employer among these manufacturers was Hautzenroeder & Company, a cigar manufacturer. This lasted for a while, but
+    unfortunately, the 1970s and 1980s brought urban blight, and the loss of many blue-collar manufacturing jobs. These issues spiraled to the point where
+    Mansfield was put on fiscal watch by the state auditor. In 2010, Mansfield became the largest city in Ohio to be declared in fiscal emergency with a $3.8
+    million deficit. This lasted about 4 years, as it took until July of 2014 to be lifted out of fiscal emergency.</p></div>
+</div>
+
+<div class = "top">
+    <div class = "infoL" style = "width:55%; margin: 50px 10px 50px 0"><p>Mansfield was also the birthplace of Mickey Rupp, racecar driver and founder of Rupp Industries. Rupp raced in the USAC Championship
+    Car series in 1964 and 65, starting 5 times, including the Indianapolis 500. While he didn't win any of the races he started in, he had some respectable
+    placments, including 3 top 10 finishes, including 6th place at the Indy 500, slightly edged out by his 5th place finish at Milwaukee in 1965. In the late 1950's,
+    Rupp created Rupp Industries in Mansfield. The began with producing go-karts, but then went on produce mini-bikes, motorcycles, snowmobiles, dirtbikes, and other
+    vehicles. However, due to bankrupcy, Rupp Industries had to clsoe in 1978, which mas made Rupp vehicles extremely collectible. Afterwards, Mickey Rupp moved
+    to Canada and took up fishing, where he would found Rupp Marine in 1979, cost effective and user-friendly outriggers. After over 20 years at the helm, Rupp
+    turned over Rupp Marine to his son and son-in-law, and moved back to Mansfield, where he currently lives (information courtesy of <a href = "https://en.wikipedia.org/wiki/Mickey_Rupp">
+    Wikipedia.com</a>, image courtesy of <a href="https://commons.wikimedia.org/wiki/File:1973_Rupp_Go-Joe.jpg" title="via Wikimedia Commons">Rupp Industries, Inc.</a> / Public domain).</p>
+    </div>
+    <div class = "imgR" style = "width:40%; margin: 20px 0 20px 10px"><img src = "pic/rupp.jpg" style = "width:100%"></img></div>
+</div>
+
+<div class = "top">
+    <div class = "imgL" style = "width: 40%; margin: 20px 15px 20px 0"><img src = "pic/ssr1.jpg" width = "100%" style = "margin-bottom: 20px"></img>
+    <img src = "pic/ssr2.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 55%; margin: 30px 0 20px 0"><p>In addition, Mansfield is home to two of the most important locations in the movie <i>The Shawshank Redemption</i>, starring Tim Robbins
+    and Morgan Freeman. The building to the upper left is the halfway house that Brooks stayed in immediately after he got released. Unfortunately, he would
+    hang himself after finding it difficult to adjust to life on the outside (information courtesy of <a href = "https://en.wikipedia.org/wiki/The_Shawshank_Redemption">Wikipedia.com</a>).<br /><br />
+    What is more notable is the building on the bottom left, the Ohio State Reformatory. In the 1860s, prior to the reformatory being built, the field it stands on was actualy used to
+    train Civl War soldiers. In 1867, Mansfield was considered as a candidate for hosting what would become the Ohio State Reformatory, which was intended as a halfway point between the Boys Industrial
+    School and the State Penitentiary in Columbus. Construction of the reformatory began in 1886, but due to funding issues, took until 1910 to complete. This did not stop the prison from opening,
+    as the first 150 offenders were taken in and immediately put to work on the sewer system and stone wall surrounding the complex in late 1896.
+    <br /><br />
+    The Reformatory would stay open until 1990, when it was forced to close due to a federal court order, a result of a class action lawsuit filed by prisoners citing inhumane conditions and overcrowding.
+    Many of the grounds and support buildings have been demolished, but in 1995, one year after the release of <i>The Shawshank Redemption</i>, the Mansfield Reformatory Preservation Society was formed,
+    which turned the prison into a museum, conducting tours to raise money for grounds rehabilitation and to ensure that the rest of the reformatory does not get demolished.
+    <br /><br />
+    The prison has seen fairly common use in pop culture, being used in the movie <i>Air Force One</i>, the music video for Godsmack's "Awake," Marilyn Manson promotional photography, a WWE promotional
+    poster, and more. The most common use of the facility in pop culture, however, is without a doubt ghost series. <i>Ghost Adventures</i>, <i>Ghost Hunters Academy,</i>, and <i>Ghost Asylum</i> have
+    all done filming inside the reformatory. In addition to that, the prison hosts public ghost hunts, private ghost hunts, ghost walks for children 13 and up, ghost hunt classes for that same age group,
+    and occasionally, special ghost hunting events, which are typically hosted by famous ghost hunters, celebrities, historians, or anybody with a profound connection to ghost hunting (all information on reformatory
+    courtesy of <a href = "https://en.wikipedia.org/wiki/Ohio_State_Reformatory">Wikipedia,com</a>, top image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Bissman_Block.jpg" title="via Wikimedia Commons">Nyttend</a> / Public domain,
+    bottom image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Mansfield_OH_-_Reformatory_-_Closed.jpg" title="via Wikimedia Commons">User: (WT-shared) 2old at  wts wikivoyage</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA</a>).
+    </p></div>
+</div>
+
+<p class = "indent"><br /><br />
+To further explore Mansfield, click <a href = "https://www.google.com/maps/@40.7825737,-82.5008516,3a,75y,329.77h,92.95t/data=!3m6!1e1!3m4!1sNUUyq8YUfrpfgzLI03Ignw!2e0!7i16384!8i8192">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+
+</div>
+</body>
+</html>

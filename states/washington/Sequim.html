@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Sequim</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    margin-right: 25px;
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "./../ohio/OhioLP.html">Ohio</a>
+        <a href = "WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial">Checkpoint: Sequim</h1>
+
+<div class = "top">
+    <div class = "imgL" style = "margin: 20px 10px 20px 0; width: 45%"><img src = "pic/sequim.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "margin: 0 0 20px 10px; width: 50%"><p>Welcome to Sequim Washinton! The name Sequim comes from the Klallman language, and is pronounced
+    "skwim." The area is known for having an extremely odd climate. Despite existing in the Pacific Northwest, an area which typically gets an abundance of rain, Sequim only gets
+    around 16 inches of rain each year, a similar number to that of Los Angeles, a result of the town being in the rain shadow of the Olympic Mountains. However, the town is also
+    near some of the wettest temperate rainforests in the country. This anomaly is sometimes referred to as the "Blue Hole of Sequim." It also has a fairly humid climate which allows
+    for surprisingly large and lush forests (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:John_Wayne_Marina_-_Sequim_Washington.jpg" title="via Wikimedia Commons">KJRSeattle</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA</a>
+    ).
+    <br /><br />
+    The town is also known for lavender cultivation. Its unique climate allows for lavender plants to grow quite effectively. This makes Sequim the "Lavender Capital of North America,"
+    and is only rivaled by France in terms of lavender cultivation.
+    <br /><br />
+    Regarding original inhabitants, in the late 1970's, at a dig site in Sequim, archeologists found a mastodon bone with a bone point embedded in it. According to Michael Waters, an archeologist
+    from Texas A&M University, this was the first weapon found which dates to the pre-Clovis era.
+    <br /><br />
+    The area would later be inhabited by the S'Klallam tribe, but this tribe would disband into federally recognized ones early in the 1900's. Regarding European settlers, the area was explored in
+    the 1790's, but not settled until the 1850's, who settled near Dungeness. The town of Sequim would be incorporated in late 1913 (information courtesy of <a href = "https://en.wikipedia.org/wiki/Sequim,_Washington">Wikipedia.com</a>
+    ).
+    </p></div>
+</div>
+
+<div class = "top">
+    <div class = "imgR" style = "margin: 45px 0 20px 10px; width: 50%"><img src = "pic/rKnievel.jpg" width = "100%"></img></div>
+    <div class = "infoL" style = "margin: 0 10px 20px 0; width: 45%"><p>Sequim has also been home to some fairly notable people. Some of these people include Richard B. Anderson, a World War II model
+    who received the Medal of Honor after his death, country music artist Bailey Bryan, two-time world champion skeet shooter Matthew Dryke, baseball executive and player Hal Keller, and perhaps most notably,
+    Robbie Knievel (information courtesy of <a href = "https://en.wikipedia.org/wiki/Sequim,_Washington">Wikipedia.com</a>
+    ).
+    <br /><br />
+    Robbie Knievel is the son of the famous stuntman Evel Knievel. Robbie began doing jumps with his bike at age 4, and started riding motorcycles at age 7. By the time he was 8, he performed his first show
+    with his father, at Madison Square Garden. By 12, he was doing the pre-jump shows while on tour with his father. Regarding schooling during this time, while Robbie attended high school, he never graduated
+    (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:RobbieKnievelTexasMotorSpeedway.jpg" title="via Wikimedia Commons">Bo Nash</a> / <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA</a>).
+    <br /><br />
+    During his career, Robbie has completed over 350 jumps, and set 20 world records. As far as televised jumps, Robbie has jumped a 130 foot gap between buildings, jumped over a moving train while moving parallel
+    to it, jumped over 5 military planes, and even jumped 228 feet accross the Grand Canyon. He did, however, lose control of the bike after landing, and broke his leg in the ensuing crash. Still, this ended up
+    being one of his most famous jumps. The final jump of Robbie's to note is the jump over the Caesars Palace fountains in 1989. This is notable due to the fact that his famed father had attempted the jump 22 years
+    prior, and failed to clear it, but Robbie succeeded. After the jump was completed, he said "that was for you, dad" (information courtesy of <a href = "https://en.wikipedia.org/wiki/Robbie_Knievel">Wikipedia.com</a>).
+    </p></div>
+</div>
+
+<p><br /><br />
+To further explore Sequim, click <a href = "https://www.google.com/maps/@48.0722969,-123.0513822,3a,75y,130.39h,94.67t/data=!3m7!1e1!3m5!1s1O_xSdfZH-v5xVEXV_u2xQ!2e0!6s%2F%2Fgeo3.ggpht.com%2Fcbk%3Fpanoid%3D1O_xSdfZH-v5xVEXV_u2xQ%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D91.19416%26pitch%3D0%26thumbfov%3D100!7i3328!8i1664">here</a>
+<br />To see a view of the lavender farms, click <a href = "https://www.google.com/maps/@48.073613,-123.066298,3a,75y,102.79h,97.47t/data=!3m8!1e1!3m6!1sAF1QipPNb9DOWAdyJ50JLazEkl0bpaZ2mi6kblnOWw9F!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPNb9DOWAdyJ50JLazEkl0bpaZ2mi6kblnOWw9F%3Dw203-h100-k-no-pi-0-ya331.1206-ro0-fo100!7i7680!8i3840">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

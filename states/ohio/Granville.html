@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Granville</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    background-color: lightgray;
+    margin: 50px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    background-color: lightgray;
+    margin: 25px;
+    margin-top: 125px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "OhioLP.html">Ohio</a>
+        <a href = "./../washington/WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial indent">Checkpoint: Granville</h1>
+
+<img style = "float:right; margin-right: 15px; margin-left: 25px;" width = "50%" src = "pic/gvilleStreet.jpg"></img>
+<p class = "indent">Now you have made it to the town of Granville Ohio! This town used to play host to several tribes of Native Americans,
+as many towns in the area did. This is in part evidenced by the earthworks in the town, namely Alligator Mound, as well as the Infirmary Mound,
+which used to lie within the town. While the mound itself is no longer present, Infirmary Mound Park lies where the mound used to stand. Despite
+this large Native American presence, when European settlers arrived around the year 1800, there reportedly was only one large Native American settlement,
+the Wyandotte settlement.<br /><br />
+Initially, Granville was surveyed in 1797 as a part of the US Military District, land set aside for those whom served in the Revolutionary war. The first
+to actually arrive in the area were the Welsh, as 4,000 acres were sold to a Welshman living in Philadelphia. The next large group of settlers to arrive
+were from Granville, Massachusetts, and Granby, Connecticut, which were neighboring communities in New England. The town of Granville, Ohio, was in fact planned
+to closely resemble a New England Town, but in the Middle of Ohio. This is evidenced by the style of buildings which were initially constructed here, some of which
+still stand today, such as some of the houses, St. Luke's Church, and the Buxton Inn.<br /><br />
+In the 1830's, Granville was home to five schools. Among them was Granville Literary and Theological Institution, which still exists today, though it is now
+referred to as Dennison University. This campus is considered a major influence on the character of the town, and is included in the Granville Historic District,
+as well as the National Register. In addition, the Granville Female Seminary was located near present-day Dennison University, and was also one of the five
+schools in Granville at the time. However, this particular school ceased to exist in the 1890's.<br /><br />
+Granville also has an interesting link to the canal system. In 1825, Ohio's Legislature autorized the construction of a canal system from Newark to Cleveland. Knowing
+that the canal would pass through the ceneter of Newark, Granville businessmen ceased the opportunity to create a feeder canal connecting Newark to Granville. This was
+completed in 1833, and allowed for Granville to send and receive shipements. However, within a few decades of this canals completion, railroads became more common,
+and the usage of canals waned. However, railraods did not make it to Granville until 1880. By this point, these railroads had little impact on the development of Granville,
+though the interurban lines, such as the one that connected Granville to Newark, had a larger impact (information courtesy of <a href = "https://www.granville.oh.us/history-of-granville">Village of Granville</a>,
+image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Broadway_shops,_Granville,_Ohio_(2).jpg" title="via Wikimedia Commons">Chamberednautilus</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA</a>).
+
+</p>
+
+<p class = "indent"><br /><br />
+To further explore Granville, click <a href = "https://www.google.com/maps/@40.0702152,-82.5014752,3a,75y,122.73h,92.3t/data=!3m6!1e1!3m4!1sRppeZ2LH_fx3DEE9jkowBQ!2e0!7i13312!8i6656">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
+
+<p>
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

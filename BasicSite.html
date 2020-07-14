@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Condensed' rel='stylesheet'>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Basic Website</title>
+<style>
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+div.home {
+    font-family: 'Open Sans', "Lucida Grande", sans-serif;
+    background-color: lightgray;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    margin: 25px;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.arial{
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 3;
+    
+}
+li.nav{
+    float: left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+
+.active{
+    background-color: #ED7014;
+}
+div.r{
+    background-color: lightgray;
+    border: 25px solid #333;
+    color: #333;
+    padding: 15px;
+    width: 35%;
+    margin-left: 75px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+
+.button{
+    border: 2px solid black;
+    color: black;
+    width: 300px;
+    height: 75px;
+    text-align: center;
+    text-decoration: none;
+    display: incline-block;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left:25px;
+    margin-right: 75px;
+    background-color: white; 
+    transition-duration: .4s;
+    cursor: pointer;
+}
+.disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+.button:hover{
+    background-color: #ED7014;/*Orange*/
+}
+.button.disabled:hover{
+    background-color: white;
+}
+.button2{
+    margin: 12px 25px;    
+}
+.don{
+    background-color: #5B676D;
+}
+li a.d, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+li a.d:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.d{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+a.list{
+    color: black;
+    text-decoration: none;
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.mySlides{display: none;}
+.w3-left, .w3-right, .w3-badge{cursor:pointer}
+.w3-badge{height: 13px; width: 13px; padding:0}
+div.c{
+    width: 50%;
+    margin: 0 auto;
+}
+img.cen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+
+<script>
+
+
+document.getElementsByName("hide").disabled = true;
+
+function dispRoutes(){
+	document.getElementById("h").innerHTML = "Routes:";
+	document.getElementById("r").innerHTML = "<li><a class = 'list' href = 'states/ohio/OhioLP.html'>Ohio Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/washington/WashingtonLP.html'>Washington Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/colorado/ColoradoLP.html'>Colorado Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/kentucky/KentuckyLP.html'>Kentucky Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/iowa/IowaLP.html'>Iowa Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/california/CaliforniaLP.html'>California Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/new_york/New_YorkLP.html'>New York Routes</a></li>"
+		   +"<li><a class = 'list' href = 'states/florida/FloridaLP.html'>Florida Routes</a></li>";
+    document.getElementById("disp").disabled = true;
+    document.getElementById("disp").className = "button disabled";
+    document.getElementById("hide").disabled = false;
+    document.getElementById("hide").className = "button";
+    document.getElementById("routes").className = "r indent";
+    document.getElementById("routes").setAttribute("Style", "overflow-y:auto; height: 200px;");
+}
+
+function hRoutes(){
+	document.getElementById("h").innerHTML = "";
+	document.getElementById("r").innerHTML = "";
+    document.getElementById("disp").disabled = false;
+    document.getElementById("disp").className = "button";
+    document.getElementById("hide").disabled = true;
+    document.getElementById("hide").className = "button disabled";
+    document.getElementById("routes").className = "";
+    document.getElementById("routes").setAttribute("Style", "overflow-y:auto; height: 0px;");
+}
+window.onbeforeunload = function () {
+	  window.scrollTo(0, 0);
+	}
+function openNav(){
+	document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+	document.getElementById("cNav").style.width = "0%";
+}
+
+</script>
+
+
+<h1><a href = "BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+<ul class = "navB" id = "navBar">
+<li class = "nav arial active"><a class = "nav" href="BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial">
+    <a href="general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a class = "d" href = "states/ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "states/washington/WashingtonLP.html">Washington</a>
+        <a class = "d" href = "states/colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "states/kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "states/iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "states/california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "states/new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "states/florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="general/Donate.html">Donate</a></li>
+</ul>
+
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "general/connect.html">Connect</a>
+            <a class = "arial" href = "general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+
+<h1>Pedaling For Parkinsons Virtual Rides</h1>
+
+<div class = "w3-content w3-display-container">
+    <img class = "cen mySlides" src = "pic/Bikes.PNG" width = "60%"></img>
+    <img class = "cen mySlides" src = "pic/bikesabt.PNG" width = "60%"></img>
+    <img class = "cen mySlides" src = "pic/bikesNav.PNG" width = "60%"></img>
+    
+    <div class = "w3-center w3-container w3-section w3-large w3-text-white
+    w3-display-bottommiddle" style = "width: 60%">
+        <div class = "w3-left w3-hover-text-khaki" onclick = "plusDivs(-1)">&#10094;</div>
+        <div class = "w3-right w3-hover-text-khaki" onclick = "plusDivs(1)">&#10095;</div>
+        <span class = "w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class = "w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class = "w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    </div>
+</div>
+
+<script>
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(u){
+	showDivs(slideIndex += u);
+}
+
+function currentDiv(u){
+	showDivs(slideIndex = u);
+}
+
+function showDivs(u){
+	var m;
+	var p = document.getElementsByClassName("mySlides");
+	var d = document.getElementsByClassName("demo");
+	if(u > p.length){
+		slideIndex = 1;
+	}
+	if(u < 1){
+		slideIndex = p.length;
+	}
+	for(m = 0; m < p.length; m++){
+		p[m].style.display = "none";
+	}
+	for(m = 0; m < d.length; m++){
+		d[m].className = d[m].className.replace(" w3-white", "");
+	}
+	p[slideIndex-1].style.display = "block";
+	d[slideIndex-1].className += " w3-white";
+}
+
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+    	document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+    	document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+
+<div class = "home">Welcome!
+<br />
+<br />This is a website for housing rides which can be done virtually 
+in support of Pedaling For Parkinsons, a foundation which supports the
+research of aerobic excercise as it relates to Parkinson's Disease.
+To learn more about Pedaling for Parkinsons, click <a href = "general/PFPInfo.html">here</a>.
+To learn about recommended cycling practices, click <a href = "general/Recommendations.html">here</a>.</div>
+
+
+<p>
+<button id = "disp" type = "button" class = "button" onclick = "dispRoutes()">Display Routes</button>
+<button id = "hide" type = "button" class = "button disabled" onclick = "hRoutes()" disabled>Hide Routes</button>
+</p>
+<div id = "routes" style = "overflow-y:auto; height: 0px;">
+    <p id = "h" class = "indent"></p>
+    <ul id = "r" class = "indent">
+    </ul>
+</div>
+
+<p class = "arial indent"><b>DISCLAIMER:</b> The routes on this site may contain streets not suited for bicycling, for anyone attempting these
+routes in real life, we recommend using extreme caution.</p>
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br /><button class = "button2" onclick = "window.print()">Print this page</button>
+</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Oberlin</title>
+<style>
+body{
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    margin: 0;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    background-color: lightgray;
+    margin: 50px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    background-color: lightgray;
+    margin: 25px;
+    margin-top: 125px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+	  window.scrollTo(0, 0);
+	}
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "OhioLP.html">Ohio</a>
+        <a href = "./../washington/WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial">Checkpoint: Oberlin</h1>
+
+<img class = "head" width = "60%" src = "pic/Oberlinrescuers.jpg" style = "margin-top: 50px; margin-bottom: 50px;"></img>
+
+<p>Now for the town of Oberlin, Ohio. Oberlin is perhaps most well-known for its importance in the abolition movements in the early 1800s.
+The town was in fact conceived as an integrated place, an extremely rare occurrence in 1833, when this town was founded. In fact, according to
+<a href = "https://www.nla.gov.au/selected-library-collections/anti-slavery-movement-in-the-united-states">the National Library of Australia</a>, black students were
+allowed to attend Oberlin College as early as 1835, 26 years prior to the start of the Civil War. This article also says that on top of that, it began admitting women in 1837, and was
+one of the first colleges to do so, and later, the town had become an active part of the
+underground railroad, and was extremely helpful in getting escaped slaves to freedom. The town of Oberlin was in fact so aggressively in favor
+of abolition that in 1858, when laws allowing disallowing slave catchers from extraditing slaves back to the south were repealed, and a slave by the name
+of John Price was captured and temporarily held in the neighboring town of Wellington, citizens from Oberlin, including white and black people,
+set out to save Price. They succeeded, and smuggled Price to Canada, but authorities were not pleased with the rescuers' actions, and had them arrested,
+though all but two were able to avoid getting sentenced and the other two received light sentences. The picture above features this group standing outside of
+the county jailhouse (information coutesy of <a href = "https://www.nytimes.com/1990/05/20/books/big-day-at-oberlin.html">New York Times</a>, image courtesy of <a href = "https://en.wikipedia.org/wiki/Oberlin,_Ohio#cite_note-nytimes-oberlineRescue-28">Wikipedia</a>).
+<br /><br /></p>
+
+<div class = "top">
+    <div class = "imageL" style = "width:40%"><img class = "wrap" src = "pic/OberlinCollege.JPG" alt = "Picture of Oblerin College" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 50%; margin: 30px 15px 20px 0">As mentioned above, Oberlin is home to Oberlin
+	College, a school comprised of the College of Arts and Sciences and the Conservatory of Music, which is regarded as one of the best schools
+	of music in the country. It is tied at #33 for best National Liberal Arts Colleges, tied with Scripps College, #12 in best Undergraduate Teaching, tied with
+	Amherst College, Furman University, and St. John's College. It is also ranked #90 for Best Value Schools, a decent rank considering its tuition and fees of nearly $57,000
+	(information courtesy of <a href = "https://www.usnews.com/best-colleges/oberlin-college-3086">U.S.News</a>). The university is also quite progressive. According to
+	<a href = "https://www.advocate.com/youth/2017/8/14/20-most-lgbt-friendly-colleges#slide-4">Advocate.com</a>, Oberlin ranks within the top 20 colleges in the nation in regards
+	to being LGBTQ friendly, specifically securing the number 17 spot. This article sites Rob Franek from <i>The Princeton Review</i>, saying that Oberlin "sponsors over 300 events
+	each year for students, especially students of color, LGBTQ students, international, first generation, and lower income students." This helps to make evident that Oberlin College
+	also does not just attempt to build a community which is more inclusive for the LGBTQ population, but for other marginalized groups as well. Finally, Oberlin College has some beautiful
+	buildings, the one on the left is Peters Hall, home of the language department (image courtesy of Public Domain, <a href="https://en.wikipedia.org/w/index.php?curid=13255059">Link</a>).
+	</div>
+</div>
+
+<p><br /> <br />To further explore the city of Oberlin, click <a href = "https://www.google.com/maps/@41.2945752,-82.2199282,3a,75y,292.1h,103.07t/data=!3m6!1e1!3m4!1s_YCrCGqwBxApvvvuLfa7Sg!2e0!7i13312!8i6656">here</a>
+<br/>Pedaling for Parkinson's claims no affiliation with Google Street View</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+
+</body>
+</html>

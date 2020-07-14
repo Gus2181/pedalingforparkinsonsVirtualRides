@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Poulsbo</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    margin-right: 25px;
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "./../ohio/OhioLP.html">Ohio</a>
+        <a href = "WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial">Checkpoint: Poulsbo</h1>
+
+<div class = "top">
+    <div class = "imgR" style = "margin: 20px 0 20px 10px; width: 45%"><img src = "pic/poulsbo1.jpg" width = "100%"></img></div>
+    <div class = "infoL" style = "margin: 5px 10px 20px 0; width: 50%"><p>Welcome to the city of Poulsbo! While this town is quite small, it has a good amount of charm
+    and some interesting history to it.
+    <br /><br />
+    In terms of the history of this place, it was originally inhabited by Squamish people, but would go on to sign the Treaty of Point Elliot in 1855, which made most
+    Squamish people to move to the Port Madison reservation, although they reportedly reserved and continue to exericise, certain cultural and natural resource rights in
+    their historical territory, which includes Poulsbo. Regarding the actual town, Poulsbo was founded by J&oslash;rgen Eliason in the 1880s, and largely settled by
+    Norwegian and Scandinavian immmigrants, as it featured a number of similarities to the countries these people emmigrated from.
+    <br /><br />
+    In the year 1886, one of the early settlers, I.B. Moe, suggested that the town should have a post office, and be called "Paulsbo," which translates to "Paul's Place,"
+    after a village in Halden. The petition for a post office was approved, and Moe was made the first postmaster. However, authorities misread the name, and thought the
+    writing read "Poulsbo." As such, Poulsbo became the name, and the town was incorporated on December 18, 1907.
+    <br /><br />
+    The statue to the right is called the "Norseman Statue," and was built in Tacoma, costing $25,000. It is made of concrete and steel, and was unvailed on November 23rd, 2012
+    (all information courtesy of <a href = "https://en.wikipedia.org/wiki/Poulsbo%2C_Washington">Wikipedia.com</a>, image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Poulsbo_Norseman_Liberty_Bay_Moon.jpg" title="via Wikimedia Commons">Brian Kilpatrick</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA</a>
+    ).
+    </p></div>
+</div>
+
+<div class = "top">
+    <div class = "imgL" style = "margin: 20px 10px 20px 0; width: 35%"><img src = "pic/poulsboA12.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "margin: 0 0 20px 10px; width: 60%"><p>In addition to this history, Poulsbo does have claim to a few notable people. It was the home of famous
+    peace activist Jim Douglas, MLB pitcher Aaron Sele, former NFL player and later coach Harland Svare, professional motorcross rider Villopoto, and Olympic canoeing medalist
+    Scott Shipley. It was also home to Jason Everman, a member of the U.S. Army Special Forces whose stints as guitar player for such bands as Nirvana and Soundgarden make him
+    an interesting footnote in the world of grunge music (information courtesy of <a href = "https://en.wikipedia.org/wiki/Poulsbo%2C_Washington">Wikipedia.com</a>).
+    <br /><br />
+    Perhaps most notably, however, it is the former home of Richard F. Gordon Jr. While Gordon was born in Seattle, he attended high school in Poulsbo, according to <a href = "https://en.wikipedia.org/wiki/Richard_F._Gordon_Jr.">wikipedia</a>.
+    <br /><br />
+    Gordon entered avaition training after he graduated college in 1951. After 6 years, he became a test piolot, and would go on to win the Bendix Trophy Race after piloting an
+    F4H Phantom jet from Los Angeles to New York City in only 2 hours and 47 minutes, an average speed of 879 miles per hour. In 1963, Gordon would finally be selected to be an
+    astronaut.
+    <br /><br />
+    Richard flew on several notable missions, one being Gemini 11, which docked with an Agena target during its first orbit, and were propelled to an altitude of 850 miles, Gordon joined
+    the two crafts during his 45 minute space-walk.
+    <br /><br />
+    However, his most prominent flight was with Alan L. Bean and Charles Conrad, who together, made the Apollo 12 flight. The group is seen to the left, with Conrad on the left, Gordon in
+    the middle, and Bean on the right (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:(Left_to_right)_Pete_Conrad,_Dick_Gordon,_and_Al_Bean_pose_with_the_Apollo_12_Saturn_V.jpg" title="via Wikimedia Commons">NASA</a> / Public domain
+    ). During the mission, Gordon was the pilot of the Command Module, and remained in lunar orbit during the second time where humans would land on the moon.
+    <br /><br />
+    Gordon would retire from the navy in 1972 and until 1977 was executive vice president of the New Orland Saints (all information on Gordon courtesy of <a href = "https://www.britannica.com/biography/Richard-F-Gordon-Jr">Encyclop&aelig;dia Britannica</a>).
+    </p></div>
+</div>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

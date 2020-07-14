@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Athens</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    background-color: lightgray;
+    margin: 50px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    background-color: lightgray;
+    margin: 25px;
+    margin-top: 125px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "OhioLP.html">Ohio</a>
+        <a href = "./../washington/WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial indent">Checkpoint: Athens</h1>
+
+<div class = "top">
+    <div class = "imgR" style = "width: 40%"><img src = "pic/Athens.JPG" width = "100%"></img></div>
+    <div class = "infoL" style = "width: 40%; margin-top: 35px;">You have now reached the town of Athens Ohio! This town is perhaps most notable for being the home
+    of Ohio University, the first public institution of higher learning in the Northwest Territory. On February 18, 1804, the state legislature passed an act
+    created Ohio University in Athens, which also makes it the recipient of the first federal endownment of an educational institution in the country.
+    Regarding industry, Athens first was a site of salt production, with iron and coal coming later. It also had the Hocking Canal run through the city,
+    allowing shipping from the Ohio River up the Hocking River, through Athens, Nelsonville, and more points further on. However, it was closed in the winter, due
+    to the water freezing over. (information coutesty of <a href = "https://en.wikipedia.org/wiki/Athens%2C_Ohio">wikipedia</a>, image courtesy of <a href="//commons.wikimedia.org/wiki/User:Ed!" title="User:Ed!">Ed!</a><a href="//commons.wikimedia.org/wiki/User_talk:Ed!" title="User talk:Ed!">(talk)</a><a href="//commons.wikimedia.org/w/index.php?title=User:Ed!/Hall_of_Fame&amp;action=edit&amp;redlink=1" class="new" title="User:Ed!/Hall of Fame (page does not exist)">(Hall of Fame)</a> - I created this work entirely by myself. (Transferred from <span class="plainlinks"><a class="external text" href="https://en.wikipedia.org">en.wikipedia</a></span> to Commons by <a href="//commons.wikimedia.org/wiki/User:Cloudbound" title="User:Cloudbound">Cloudbound</a>.), <a href="https://creativecommons.org/licenses/by-sa/3.0" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=18236557">Link</a>)
+    </div>
+</div>
+
+<div class = "top">
+    <div class = "imgL" style = "width: 20%; margin: 50px 0 50px 50px"><img src = "pic/joe.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 65%; margin: 50px 50px 50px 0;">Regarding pop culture, Athens has been home to some very notable people. Among those people is Joe Burrow.
+    Burrow played football in Athens where he attended high school. He would go on to play quarterback at OSU, get a redshirt his first year (allowing him to play college football for 5 years),
+    but not start in his next two years. He then transferred to LSU, where he would play quarterback for his final two years in college. His final year, he won the Heisman Trophy by
+    a record-setting margin. He got close to the record for first-place votes, held at 855 by OJ Simpson (Burrow got 841), but his margin of 1,846 broke OJ's record of 1,750. 
+    <br /><br />Burrow had stated that "this is what kids dream of," and that getting to compete in the National Championship as the quarterback for the number 1 team in the country had always been a dream of his.
+    <br /><br />In addition to the records he had set, he set an additional three. Burrow earned an astonishing 93.8% of all possible points, was picked first on 90.7% of the ballots,
+    and named on 95.5% of all ballots.
+    <br /><br />None of this even mentions the amount of improvement seen in Burrow since last year. This was his first season as starting quarterback, and while he did quite well,
+    his performance pales in comparrison to his 2019 season. He managed to lead the team to a 10-3 season, and became the first quarterback in LSU's football program's history to
+    throw at least 2,500 and rush at least 3,500 yards in the same season. However, he was ranked in the bottom half of the SEC among starting quarterbacks, but he obviously was able
+    to improve his performance going into his final year.
+    </div>
+</div>
+
+<div class = "top">
+    <div class = "imgL" style = "width: 40%; margin: 50px 0px 25px 25px;"><img src = "pic/Art_Tripp.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 50%; margin: 15px 25px 25px 0px;">On the opposite end of the spectrum is Arthur Tripp. While Art grew up in Pittsburgh, he was born in Athens. After getting his Bachelor's in Music
+    from the Cincinnati College Conservatory of Music, he accepted a scholarship to the Manhatten School of Music, and received his Masters of Music.
+    <br /><br />While in New York City, Tripp would meet Frank Zappa's producer. The prodcuer told Zappa about Tripp, who asked him to play a show for him. This quickly lead to Zappa hiring Tripp
+    to play for his band the Mothers of Invention. Tripp would record several albums with the band, later joining Captain Beefheart's
+    Magic Band. He would be a part of this group for around 5 years of recording and touring, recording such albums as <i>Lick My Decals Off, Baby</i>, and <i>Shiny Beast</i>.
+    <br /><br />However, conflicts with Beefheart became such that the Magic Band disbanded. By this point, Tripp had become
+    dissatisfied with the music industry, and decided to return to Pittsburgh and sell insurance with his father. After three years, he also realised this was not something he wanted to do, prompting him to
+    return to Los Angeles and became a studio musician, recording with such artists as Al Stewart.
+    <br /><br />After realising that being a studio musician lacked the allure of being in a live band, Tripp left music again, and begame a chiropractor. (information
+    courtesy of <a href = "https://en.wikipedia.org/wiki/Art_Tripp#Captain_Beefheart_and_The_Magic_Band">Wikipedia.com</a>, image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Art_Tripp_Chicago_in_1968.jpg" title="via Wikimedia Commons">Arthur Tripp</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>).
+    </div>
+</div>
+
+<p class = "indent"><br /><br />
+To further explore Athens, click <a href = "https://www.google.com/maps/@39.3205289,-82.1086719,3a,75y,236.69h,100.98t/data=!3m6!1e1!3m4!1sGsbML6fGJWqlTEuYSePyIA!2e0!7i16384!8i8192">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

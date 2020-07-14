@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Connect</title>
+<style>
+body{
+    background-color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+div.login{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 12px;
+    background-color: lightgray;
+    margin: 0px;
+    padding: 10px;
+    text-align: right;
+}
+
+div.home {
+    font-family: 'IBM Plex Sans Condensed', "Lucida Grande", sans-serif;
+    background-color: lightgray;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    margin: 25px;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arial{
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+    
+}
+li.nav{
+    float: left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.content{
+    padding: 15px;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+.active{
+    background-color: #ED7014;
+}
+div.r{
+    background-color: lightgray;
+    border: 25px solid #333;
+    color: #333;
+    padding: 15px;
+    width: 35%;
+    margin-left: 75px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+.button2{
+    margin: 12px 25px;    
+}
+.don{
+    background-color: #5B676D;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+li a.d, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+li a.d:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.d{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+a.list{
+    color: black;
+    text-decoration: none;
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.mySlides{display: none;}
+.w3-left, .w3-right, .w3-badge{cursor:pointer}
+.w3-badge{height: 13px; width: 13px; padding:0}
+div.c{
+    width: 50%;
+    margin: 0 auto;
+}
+img.cen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+	  window.scrollTo(0, 0);
+	}
+function openNav(){
+	document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+	document.getElementById("cNav").style.width = "0%";
+}
+</script>
+
+<h1><a href = "./../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="Contact.html">Contact Us</a></li>
+<li class = "dropdown arial">
+    <a href="Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a class = "d" href = "./../states/ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "./../states/washington/WashingtonLP.html">Washington</a>
+        <a class = "d" href = "./../states/colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../states/kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../states/iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../states/california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../states/new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../states/florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial active"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+</ul>
+
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "connect.html">Connect</a>
+            <a class = "arial" href = "Create.html">Creating a Group</a>
+    </div>
+</div>
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+<h2 class = "arial">Joining a PFP group</h2>
+
+<p>Joining a Pedaling for Parkinson's Virtual Ride group is easy, but will require a facebook account. To set this
+up, simply go to <a href = "https://www.facebook.com/">facebook.com</a>, and enter your information in the large 'sign up' part of the page. If you already have an
+account, simply log in at the top and follow the instructions below!</p>
+
+<img class = "head gB" src = "pic/pfpPage.PNG" width = "70%"></img>
+
+<p>The image above is the main page for the Facebook page dedicated to these virtual rides, which can be found <a href = "https://www.facebook.com/Pedaling-for-Parkinsons-Virtual-Rides-104515754622104">here</a>.
+From this homepage, you can talk to others who do Pedaling for Parkinson's Vitrual Rides, connect with people from other groups, etc.</p>
+
+<p>To join one of the groups, click on more, then groups. This will take you to the screen shown in the image below, where you will be
+able to join.</p>
+
+<img class = "head gB" src = "pic/fbGroups.png" width = "70%"></img>
+
+<p>In the image above is the landing page for all of the groups linked to the Virtual Rides page. This will house Facebook Groups for all of the riding groups
+that are a part of This program. At the moment, only one "test" group is listed. Normally, this page will be more populated. To join the group, click on it from
+this page, and then click the "Join Group" icon. Groups will be private, so an administrator will have to let you in, but they should do this quickly. This is done
+simply to avoid bots.</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button2" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

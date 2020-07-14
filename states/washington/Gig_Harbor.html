@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Gig Harbor</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 0;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    margin-right: 25px;
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 0 25px 25px 0;
+}
+div.content{
+    margin: 0 25px 0 25px;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "./../ohio/OhioLP.html">Ohio</a>
+        <a href = "WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial">Checkpoint: Gig Harbor</h1>
+
+<div class = "top">
+    <div class = "imgL" style = "margin: 20px 10px 20px 0; width: 50%"><img src = "pic/Gig_Harbor.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "margin: 0px 0 20px 10px; width: 45%"><p>Welcome to Gig Harbor! This is the name of both a bay on the coast of Puget Sound, as
+    well as a city on its shore. As many cities and towns do, Gig Harbor claims to be "the gateway to the Olympic Peninsula."
+    <br /><br />
+    Gig Harbor originally got the name back in 1841. During a storm in 1840, Charles Wilkes brought the captain's gig (which is a small boat) into the harbor for
+    protection, he would later call this area Gig Harbor when creating the 1841 map of the Oregon Territory. It was officially incorporated in July of 1946. Gig Harbor
+    was somewhat cut off from the neightboring Tacoma, until 1940, when a bridge was constructed which connected the two towns. This bridge, however, collapsed within a few
+    months, and due to World War II, a new bridge could not be constructed until 1950. After this happened, Gig Harbor quickly began to develop as a suburb of Tacoma.
+    Housing developments popped up, and what used to be summer cabins had turned into full-time residences bought by people who would commute into Tacoma every day,
+    retail stores developed, and the city opted to annex surrounding rural areas, converting them into high-density commercial and housing districts.
+    <br /><br />
+    Despite the town's history of shipbuilding, it is extremely uncommon in Gig Harbon now. Only one manufacturer of boats remains, Gig Harbor Boatworks. The town also
+    features a boatyard which had sat idle for years, but was recently purchased by the city, who intends to use it as a working waterfront museum. And while commerical fishing is
+    still of cultural significance in Gig Harbor, it is of lesser economic importance (all information courtesy of <a href = "https://en.wikipedia.org/wiki/Gig_Harbor,_Washington">Wikipedia.com</a>
+    ).
+    </p></div>
+</div>
+
+<img src = "pic/gHarborG.jpg" style = "width: 15%; margin: 20px 30px 30px 0; float: left"></img>
+<p style = "margin: 15px 15px 15px 0">Now, while Gig Harbor has abandoned its history as a shipbuilding and fishing town, it has become a tourist attraction for people
+travelling to Washington, specifically, the Seattle or Tacoma area. The harbor itself is very picturesque, making the town an enjoyable stop. It has also been the
+home of several notable people, including several athletes. Some of these athletes include Tally Hall (pictured left), a goalie in Major League Soccer for ten seasons
+(image courtesy of <a href="https://commons.wikimedia.org/wiki/File:TallyHall_07JUL2012.jpg" title="via Wikimedia Commons">Warrenfish</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>),
+runner Doris Brown Heritage, former NFL player Cory Procter, NFL player Austin Seferian-Jenkins, golfer Kyle Stanley, and former soccer player Keith Weller. It has also had
+several appearances in media. It had a shoutout when the band The Men They Couldn't Hang recorded the song "Grave-Robbing in Gig Harbor" on <i>The Domino Club</i>, and again
+in <i>CSI</i> season 12, episode 13, which involves a flashback tracing someone named "the Gig Harbor Killer," a charcter which appears again in season 13, episode 22. Finally,
+the 2018 HGTV Dream Home is in Gig Harbor
+(information courtesy of <a href = "https://en.wikipedia.org/wiki/Gig_Harbor,_Washington">Wikipedia.com</a>).
+<br /><br />
+In terms of specific attractions in Gig Harbor, it feautures the Harbor History Museum, which focuses on regional history and culture, a couple breweries, specifically 7 Seas
+Brewing and Wet Coast Brewing, several restaurants, including Tides Tavern, Blazing Onion, Moctezuma's Mexican Restaurant and Tequila Bar, and Massimo Bar and Grille, as well
+as a plethora of parks to visit (information courtesy of <a href = "https://vacationidea.com/washington/best-things-to-do-in-gig-harbor-wa.html">Vacationidea.com</a>).
+<br /><br />
+So while Gig Harbor may not be as rich with history as some other towns, it definitely warrants visiting, the sheer amount of things to do combined with how
+beautiful the town is makes visits worthwhile.
+</p>
+
+<p><br /><br />
+To further explore Gig Harbor, click <a href = "https://www.google.com/maps/@47.3337904,-122.5852271,3a,75y,37.13h,99.35t/data=!3m7!1e1!3m5!1s5DwaQ0TMVDkPg9y8m8e6Kg!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3D5DwaQ0TMVDkPg9y8m8e6Kg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D60.45555%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>

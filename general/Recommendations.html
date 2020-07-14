@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Cycling Recommendations</title>
+<style>
+body{
+    font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 150%;  
+    margin: 0;
+}
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+div.login{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 12px;
+    background-color: lightgray;
+    margin: 0px;
+    padding: 10px;
+    text-align: right;
+}
+
+div.home {
+    font-family: 'IBM Plex Sans Condensed', "Lucida Grande", sans-serif;
+    background-color: lightgray;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    margin: 25px;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arial{
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+    
+}
+li.nav{
+    float: left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.content{
+    padding: 15px;
+}
+.sticky + .content {
+    padding-top: 60px;
+}
+.active{
+    background-color: #ED7014;
+}
+div.r{
+    background-color: lightgray;
+    border: 25px solid #333;
+    color: #333;
+    padding: 15px;
+    width: 35%;
+    margin-left: 75px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+p {
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+
+.button2{
+    margin: 12px 25px;    
+}
+.don{
+    background-color: #5B676D;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+li a.d, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial, "Lucida Grande", sans-serif;
+}
+li a.d:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.d{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+a.list{
+    color: black;
+    text-decoration: none;
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+    margin-left: 0;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+.mySlides{display: none;}
+.w3-left, .w3-right, .w3-badge{cursor:pointer}
+.w3-badge{height: 13px; width: 13px; padding:0}
+div.c{
+    width: 50%;
+    margin: 0 auto;
+}
+img.cen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    line-height: 220%;
+    font-size: 18px;
+    margin-left:200px;
+    margin-right: 200px;
+    font-family: 'Open Sans';
+}
+ul.b{
+    font-family: 'Open Sans';
+    font-size: 18px;
+    line-height: 220%;
+}
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+
+<h1><a href = "./../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="PFPInfo.html">About PFP</a></li>
+<li class = "nav arial active"><a class = "nav" href="Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="Contact.html">Contact Us</a></li>
+<li class = "dropdown arial">
+    <a href="Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a class = "d" href = "./../states/ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "./../states/washington/WashingtonLP.html">Washington</a>
+        <a class = "d" href = "./../states/colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../states/kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../states/iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../states/california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../states/new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../states/florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+</ul>
+
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "connect.html">Connect</a>
+            <a class = "arial" href = "Create.html">Creating a Group</a>
+    </div>
+</div>
+<div class = "content">
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<h1 class = "arial indent">Cycling Instructions:</h1>
+
+<img class = "head" src = "pic/rec.PNG"></img>
+
+<p>Our recommendations are for a high rate of revolutions per minute (RPMs), high intensity exercise session
+with low to zero resistance on the bicycle wheels. Therefore, you will need access to a stationary bike that
+has an RPM read out, and also adjustable resistance.
+<br /><br />
+Additionally, we recommend cyclists wear a heart rate monitor strap on their chest during cycling to safely
+monitor heart rate during exercise. These can be purchased at any sporting goods store or Target.
+<br /><br />Regarding actual cycling, we recommend the following:
+</p>
+<ul class = "b" style = "margin-left: 250px; margin-right: 300px">
+<li><b>Baseline (first) Session:</b> Treat your first session as a baseline cycling session, and note what your
+preferred rate of revolutions per minute is. For instance, suppose your preferred rate is approximately 50RPMs
+with a resistance setting on the bicycle of 4.</li>
+<li><b>Subsequent Cycling Recommendations:</b> Lower the resistance of the bicycle all the way down to zero. Your goal
+is to pedal approximately 30-35% faster than your preferred RPMs. This means that if your preferred rate was 50 RPMs, you will
+now aim to pedal 67 RPMs</li>
+</ul>
+
+<p style = "margin-left: 275px; margin-right: 325px;"><br /><b><i>Specifics per Exercise Session:</i></b></p>
+<ul class = "b" style = "margin-left: 250px; margin-right: 300px;">
+<li><b>Warm Up:</b> Conduct a 5-10 minute warm-up, bringing your heart rate up close to the bottom of your target heart rate range (see below).</li>
+<li><b>Main Aerobic Set:</b> Cycle at the increased RPMs for 40 minutes in your aerobic range as tolerated.</li>
+<li><b>Cool-Down:</b> Complete the session with a 5-10 minute cool-down, bringing your heart-rate down to roughly where it was at the beginning of your session.</li>
+</ul>
+
+<p style = "margin-left: 275px; margin-right: 325px;"><br /><b><i>Notes:</i></b></p>
+<ul class = "b" style = "margin-left: 250px; margin-right: 300px;">
+<li>If you are unable to go the full 40 minutes in your aerobic range, aim to cycle in 10 minute chunks of time, and work towards going 40 consecutive minutes as tolerated.</li>
+<li>As the weeks progress, increase your RPMs gradually to the recommended 80-90 RPMs.</li>
+<li>We recommend cycling 3 times per week, with a day of rest in between each session.</li>
+</ul>
+
+<p style = "margin-left: 275px; margin-right: 325px;"><br /><b><i>Overall Cycling Recommendations:</i></b></p>
+<ul class = "b" style = "margin-left: 250px; margin-right: 300px;">
+<li>We believe the two most important aspects of advantageous cycling for PD are the RPMs (goal of 80-90 RPMS), and
+the heart rate being between 60-80% of your maximum during the aerobic portion of exercise. If your heart rate is too high,
+lower the RPMs slightly to bring it back in range. If your heart rate is too low but your RPMs are at your goal, you can
+bring the resistance up a bit on the bike until your heart rate is in range, and then lower it again.</li>
+<li>We do not believe there are any benefits to cycling above 80-90 RPMs, and you could put yourself at an increased
+cardiac risk going above that cadence. If you are going between 80-90 RPMs and your heart rate is too low, add a bit of resistance to the bike.</li>
+</ul>
+
+<p><br />We recommend people see their doctor to clear them for a new exercise program. If you have <b><i>no cardiac issues</i></b> in your history,
+the standard calculation to determine an aerobic heart rate range is as follows:<br />
+<br /> 220- your age = maximum aerobic heart rate (HR)<br />
+Maximum aerobic x 60% = lower end of your aerobic range<br />
+Maximum aerobic HR x 80% = upper end of your aerobic range<br />
+<br />
+So, for a cyclist who is 55 years old:<br />
+220 - 55 = 165<br />
+165 &times; 60% (or .60) = 99<br />
+165 &times; 80% (or .80) = 132<br />
+So during the aerobic portion of exercise, aim to keep your HR in the range of <b>99-132</b> beats per minute.
+<br /><br />
+<b>Additional Recommendation: </b><br />
+We do recommend all of our Parkinson's disease participants are under the care of a movement disorders neurologist
+(as opposed to a general neurologist). A movement disorders neurologist has more experience with the tyoes of medications
+and dosing that are relative and specific to Parkinson's disease patients.
+<br />
+<b>Contact Information:</b><br />
+Please contact Liz if you have any questions regarding the cycling recommendations-She is a great resource for the Parkinson's
+community, regardless of where you receive your care.<br /><br />
+Liz Jansen, MPH, BA, Program Manager for Dr. Jay Alberts's Neuroscience Laboratory<br />
+The Cleveland Clinic, Department of Biomedical Engineering<br />
+Phone: 216-445-3866<br />
+Email: jansena@ccf.org
+</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "button" onclick = "window.print()">Print this page</button>
+</p>
+
+</div>
+</body>
+</html>

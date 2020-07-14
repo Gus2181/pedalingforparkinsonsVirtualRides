@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Lyndhurst</title>
+<style>
+
+
+body{
+    margin: 0;
+}
+
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li.nav{
+    float:left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.img1{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.info1{
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    background-color: lightgray;
+    margin: 50px;
+    margin-top:30px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 400px;
+    overflow: hidden;    
+}
+div.img2{
+    width: 300px;
+    float: right;
+    margin-right: 50px;
+}
+div.info2{
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    background-color: lightgray;
+    margin: 25px;
+    margin-top: 125px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}    
+div.home {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    margin: 20px;
+}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}    
+</style>
+</head>
+<body>
+<script>
+window.onbeforeunload = function () {
+	  window.scrollTo(0, 0);
+	}
+function openNav(){
+	document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+	document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href = "./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href = "./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href = "./../../general/Contact.html">Contact us</a></li>
+<li class = "dropdown arial active">
+    <a href = "./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a href = "OhioLP.html">Ohio</a>
+        <a href = "./../washington/WashingtonLP.html">Washington</a>
+        <a href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style = "float: right" class = "nav arial don"><a class = "nav" href = "./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<h1 class = "arial indent">Checkpoint 2: Lyndhurst</h1>
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<div class = "top">
+    <div class = "img1"><img src = "pic/eg.PNG" alt = "egg_mosaic" width = "500"></img></div>
+    <div class = "info1">The town of Lyndhurst is the next stop on this route. Though incorporated as a part of Euclid, OH, it was
+    remaned to Lyndhurst in 1920 and officially incorporated as its own city in 1950 (information courtesy of
+    <a class = "arial" href = "https://case.edu/ech/articles/l/lyndhurst">Encyclopedia of Cleveland History</a>). Additionally, Lyndhurst
+    features "Eggshellland," a mosaic made of thousands of hand-painted eggs near easter (information and image courtesy of 
+    <a class = "arial" href = "https://www.atlasobscura.com/places/eggshelland">Atlas Obscura</a>). We can see one of these beautiful displays on the left,
+    this particular displaying several large characters at the bottom, as well as what may be a rainbow colored cross, and the name of the
+    display spelled out at the top.</div>
+</div>
+<p><img class = "head" src = "pic/rberries.PNG" alt = "Picture of the Raspberries" width = "75%"></img></p>
+
+<div class = "home">In addition, singer/songwriter/guitarist for the group "The Raspberries," Eric Carmen (center), is originally from Lyndhurst.
+Above, we see the group during a live performance (image courtesy of <a class = "arial" href = "https://www.discogs.com/artist/520737-Raspberries">
+Discogs</a>). While not the most popular group ever, the Raspberries had an extremely respectable career, releasing several studio albums which all
+achieved decent success. In addition, Carmen had a successful solo career, with his steady stream of singles and albums. In fact, his frist
+album, simply titled <i>Eric Carmen</i>, hit #21 on the Billboard top 200, and both that album and the single <i>All By Myself</i>
+were certified gold in the mid to late 70's (information courtesy of <a class = "arial" href = "https://www.billboard.com/music/Eric-Carmen/chart-history/TLP">Billboard</a>
+and <a class = "arial" href = "https://www.riaa.com/gold-platinum/?tab_active=default-award&se=eric+carmen#search_section">RIAA</a>).</div>
+
+<p class = "arial indent">To further explore Lyndhurst, click <a class = "arial" href = 
+"https://www.google.com/maps/@41.5012494,-81.5017318,3a,75y,12.51h,91.65t/data=!3m7!1e1!3m5!1sUmpVFQQq_Nat5LY8DURcww!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3DUmpVFQQq_Nat5LY8DURcww%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D310.07788%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656"
+>here</a>.<br />Pedaling for Parkinson's does not claim any affiliation with Google Street View.</p>
+
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+</div>
+</body>
+</html>
