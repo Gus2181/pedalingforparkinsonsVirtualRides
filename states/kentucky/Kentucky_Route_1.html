@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="math.js" type="text/javascript"></script>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<title>Kentucky Route 1</title>
+<style>
+body{
+    margin: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    line-height: 150%;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    margin-left: 25px;
+}
+div.top{
+
+    overflow: hidden;
+}
+div.img{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.info{
+    float: right;
+    background-color: lightgray;
+    margin: 50px 20px 50px 10px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 50%;
+    overflow: hidden;    
+}
+div.check{
+    float: right;
+    margin: 50px 20px 50px 10px;
+    margin-top: 15px;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    background-color: lightgray;    
+    width: 50%;
+    overflow: hidden;  
+}
+.indent{
+    margin-left: 25px;
+}
+.arial{
+    font-family: Arial, Helvetica, sans-serif;
+}
+img.head{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul.navB{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+}
+li.nav{
+    float: left;
+}
+a.nav{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.nav a:hover:not(.active){
+    background-color: #ED7014;
+    transition-duration: .4s;
+}
+.active{
+    background-color: #ED7014;
+}
+.don{
+    background-color: #5B676D;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.content{
+    padding: 15px;
+}
+li a.d, .dropbtn{
+    background-color = #333;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial;
+}
+li a.d:hover, .dropdown:hover .dropbtn{
+    transition-duration: .4s;
+    background-color: #ED7014;
+}
+li.dropdown{
+    display: inline-block;
+    float: left;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a.d{
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
+
+.dropdown:hover .dropdown-content{
+    display: block;}
+.overlay{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.overlayC{
+    position: relative;
+    top: 25%;
+    width: 100;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: .3s;
+}
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+.overlay .closeB{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px}
+    .overlay .closeB{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+.fa{
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 25px;
+    border-radius: 50%;
+}
+.fa:hover{
+    transition-duration: .4s;
+    opacity: .7;
+}
+.fa-facebook{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+div.gMap{
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    z-index: 0;
+    margin-right: 80%;
+}
+div.cap{
+    height: 360px;
+    
+}
+#progress{
+    width: 100%;
+    background-color: gray;
+}
+#bar{
+    width: 0%;
+    height: 30px;
+    background-color: #ED7014;
+    line-height: 30px;
+    color: white;
+}
+</style>
+</head>
+<body onload = "checkCookie()">
+<script>
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+function openNav(){
+    document.getElementById("cNav").style.width = "100%";
+}
+function closeNav(){
+    document.getElementById("cNav").style.width = "0%";
+}
+</script>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
+
+<ul class = "navB" id = "navBar">
+<li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
+<li class = "dropdown arial active">
+    <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
+    <div class = "dropdown-content">
+        <a class = "d" href = "./../ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "./../washington/WashingtonLP.html">Washington</a>
+        <a class = "d" href = "./../colorado/ColoradoLP.html">Colorado</a>
+        <a class = "d" href = "KentuckyLP.html">Kentucky</a>
+        <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
+        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
+    </div>
+</li>
+<li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
+</ul>
+<div id = "cNav" class = "overlay">
+    <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
+    <div class = "overlayC">
+            <a class = "arial" href = "./../../general/Navigate.html">Navigating the Site</a>
+            <a class = "arial" href = "./../../general/connect.html">Connect</a>
+            <a class = "arial" href = "./../../general/Create.html">Creating a Group</a>
+    </div>
+</div>
+
+<div class = "content">
+
+<h1 class = "indent">Route #1 (191m)</h1>
+
+<script>
+window.onscroll = function() {stickToggle()};
+
+var head = document.getElementById("navBar");
+var stick = head.offsetTop;
+
+function stickToggle(){
+    if(window.pageYOffset >= stick){
+        document.body.style.paddingTop = head.offsetHeight+"px";
+        head.classList.add("sticky");
+    } else{
+        document.body.style.paddingTop = 0;
+        head.classList.remove("sticky");
+    }
+}
+</script>
+
+<div class = "top">
+    <div class = "img" style = "width: 40%;"><img src ="pic/woodfordr.jpg" width = "100%"></img></div>
+    <div class = "info" style = "width: 50%">This route will take riders on several of the stops on Kentucky's ever famous Bourbon Trail. Kentucky is famous for
+    producing almost all of the bourbon in the united states, and this allows people to see the distilleries in which it gets made. If you get the chance to tour these
+    distilleries in real life, you will also get to meet some of the distillers, and taste a wide variety of bourbons, as well as other whiskeys.
+    <br /><br />
+    The route itself is 191 miles long, which makes it considerably long, but nothing crazy. It will definitely take multiple days to complete, and may take some people
+    multiple weeks. As with all rides on this site, take your time, be safe, and have fun (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:MMline.jpg" title="via Wikimedia Commons">Shadle</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>)!
+    </div>
+</div>
+
+<p><br /></p>
+
+<h2>Checkpoints</h2>
+<ol>
+	<li><a href = "MMD.html">Maker's Mark Distillery (49.5m to next)</a></li>
+	<li><a href = "WTD.html">Wild Turkey Distillery (11.1m to next)</a></li>
+	<li><a href = "#">Woodford Reserve Distillery (67.5.m to next)</a></li>
+	<li><a href = "#">Stitzel-Weller Distillery (26.9m to next)</a></li>
+	<li><a href = "#">Jim Beam American Stillhouse (36m to end)</a></li>
+</ol>
+
+<p><br /></p>
+
+<p><br /></p>
+
+
+
+<div id = "gmap" class = "gMap"></div>
+<div id = "capture" class = "cap"></div>
+<p><br /></p>
+<script>
+var map;
+var src = "https://docs.google.com/uc?id=1wiAFQWcY36k1UvvZ7bWe0cA91nWiyIZl&amp;export=kml";
+var myLatLng = {lat: 40.720200, lng: -81.874237}
+
+function initMap(){
+    map = new google.maps.Map(document.getElementById("gmap"), {
+        center: myLatLng,
+        zoom: 11,
+        mapTypeId: 'terrain'
+    });
+    var kmlLayer = new google.maps.KmlLayer(src, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    kmlLayer.addListener('click', function(event) {
+        var content = event.featureData.infoWindowHtml;
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+}
+</script>
+<script async defer
+src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
+</script>
+
+<p>How many miles have you ridden (Total for this ride)?</p>
+<input type = "text" id = "userInput"></input>
+<button onclick = "t()">Submit</button>
+<button onclick = "setCookie('Kentucky1_numMiles', 0, 30)">Reset</button>
+<p style = "margin:0"><br /></p>
+<div id = "progress">
+    <div id = "bar"><p id = "barLabel" style = "padding-left: 15px;">0%</p></div>
+</div>
+<p id = "message">Oh no! You have not completed any miles!</p>
+
+<p id = "town"></p>
+<p>
+<br />
+<a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
+<a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
+<br />
+<button class = "indent button" onclick = "window.print()">Print this page</button>
+</p>
+ 
+ <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+ <script type="text/javascript">
+ function t(){
+     var miles = document.getElementById("userInput").value;
+     setCookie("Kentucky1_numMiles", miles, 30);
+     pRoute(miles);
+ }
+ function setCookie(cname,cvalue,numdays) {
+      if(cvalue == 0){
+          confetti.remove();
+      }
+      var d = new Date();
+      d.setTime(d.getTime() + (numdays*24*60*60*1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      checkCookie();
+    }
+ 
+ function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+ 
+ function checkCookie()
+ {
+ var miles=getCookie("Kentucky1_numMiles");
+ if (miles!="" && miles != null)
+   {
+        displayBar(miles);
+        pRoute(miles);
+   }
+ }
+ var i = 0;
+ function displayBar(m){
+     var length = 191;
+     var perc = (m/length)*100;
+     
+     var bar = document.getElementById("bar");
+     var label2 = document.getElementById("barLabel");
+     var message = document.getElementById("message");
+     
+     if(m == 0){
+         bar.style.width = "0";
+         barLabel.innerHTML = "0%";
+         message.innerHTML = "Oh no! You have not completed any miles!";
+     }
+
+     if(i == 0){
+         i = 1;
+         var label = document.getElementById("pLabel");
+         var width = 1;
+         var id = setInterval(frame, 10);
+         function frame(){
+             if(width >= perc || width >= 100){
+                 clearInterval(id);
+                 i = 0;
+             } else{
+                 width++;
+                 bar.style.width = width+"%";
+                 label2.innerHTML = width+"%";
+                 if(perc >= 100 && width == 100){
+                     confetti.start(5000);
+                 }
+             }
+         }
+     }
+     
+     var dispP = perc;
+     dispP = dispP * 100;
+     dispP = Math.trunc(dispP);
+     dispP = dispP / 100;
+     
+     if(perc>100){
+         message.innerHTML = "Wow, way to go above and beyond! You have completed "+dispP+"% of this ride!";
+     }
+     else if(perc>0){
+         message.innerHTML = "Congratulations! You have completed "+dispP+"% of this ride!";
+     }
+     
+ }
+ 
+ function pRoute(m){
+     var tot = 191;
+     var to5 = 155;
+     var to4 = 128.1;
+     var to3 = 60.6;
+     var to2 = 49.5;
+     
+     var town = document.getElementById("town");
+     if(m >= tot){
+         town.innerHTML = "You've made it to the end of the race, and are back at the <a href = '#'>Maker's Mark Distillery</a>!"
+     } else if(m >= to5){
+         town.innerHTML = "You've made it to the <a href = '#'>Jim Beam American Stillhouse</a>!"
+     } else if(m >= to4){
+         town.innerHTML = "You've made it to the <a href = '#'>Stitzel-Weller Distillery</a>!"
+     } else if(m >= to3){
+         town.innerHTML = "You've made it to the <a href = '#'>Woodford Reserve Distillery</a>!"
+     } else if(m >= to2){
+         town.innerHTML = "You've made it to the <a href = 'WTD.html'>Wild Turkey Distillery</a>!"
+     } else{
+         town.innerHTML = "You haven't made it to any checkpoints, and have still most recently been at the <a href = 'MMD.html'>Maker's Mark Distillery</a>!"
+     }
+ }
+ 
+ </script>
+
+</div>
+
+</body>
+</html>
