@@ -314,9 +314,9 @@ function stickToggle(){
 <ol>
 	<li><a href = "MMD.html">Maker's Mark Distillery (49.5m to next)</a></li>
 	<li><a href = "WTD.html">Wild Turkey Distillery (11.1m to next)</a></li>
-	<li><a href = "#">Woodford Reserve Distillery (67.5.m to next)</a></li>
-	<li><a href = "#">Stitzel-Weller Distillery (26.9m to next)</a></li>
-	<li><a href = "#">Jim Beam American Stillhouse (36m to end)</a></li>
+	<li><a href = "WRD.html">Woodford Reserve Distillery (67.5.m to next)</a></li>
+	<li><a href = "SWD.html">Stitzel-Weller Distillery (26.9m to next)</a></li>
+	<li><a href = "JBS.html">Jim Beam American Stillhouse (36m to end)</a></li>
 </ol>
 
 <p><br /></p>
@@ -475,13 +475,13 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
      
      var town = document.getElementById("town");
      if(m >= tot){
-         town.innerHTML = "You've made it to the end of the race, and are back at the <a href = '#'>Maker's Mark Distillery</a>!"
+         town.innerHTML = "You've made it to the end of the race, and are back at the <a href = 'MMD.html'>Maker's Mark Distillery</a>!"
      } else if(m >= to5){
-         town.innerHTML = "You've made it to the <a href = '#'>Jim Beam American Stillhouse</a>!"
+         town.innerHTML = "You've made it to the <a href = 'JBS.html'>Jim Beam American Stillhouse</a>!"
      } else if(m >= to4){
-         town.innerHTML = "You've made it to the <a href = '#'>Stitzel-Weller Distillery</a>!"
+         town.innerHTML = "You've made it to the <a href = 'SWD.html'>Stitzel-Weller Distillery</a>!"
      } else if(m >= to3){
-         town.innerHTML = "You've made it to the <a href = '#'>Woodford Reserve Distillery</a>!"
+         town.innerHTML = "You've made it to the <a href = 'WRD.html'>Woodford Reserve Distillery</a>!"
      } else if(m >= to2){
          town.innerHTML = "You've made it to the <a href = 'WTD.html'>Wild Turkey Distillery</a>!"
      } else{
