@@ -3,63 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-<title>New York</title>
+<title>Napa Valley</title>
 <style>
 body{
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
     line-height: 150%;
 }
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2{
-    margin-left: 25px;
-}
-div.top{
-    overflow: hidden;
-}
-div.imgL{
-    width: 300px;
-    float: left;
-    margin-left: 25px;
-}
-div.infoR{
-    float: right;
-    margin: 50px;
-    overflow: hidden;    
-}
-div.imgR{
-    width: 300px;
-    float: right;
-    margin-right: 50px;
-}
-div.infoL{
-    float: left;
-    margin: 25px;
-    margin-top: 25px;
-    overflow: hidden;    
-}
-div.r{
-    background-color: lightgray;
-    margin-left: 50px;
-    border: 25px solid #333;
-    color: #333;
-    padding: 15px;
-    width: 35%;
-}
-.indent{
-    margin-left: 25px;
-}
 .arial{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 img.head{
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
 }
 ul.navB{
     list-style-type: none;
@@ -67,10 +29,9 @@ ul.navB{
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    
 }
 li.nav{
-    float: left;
+    float:left;
 }
 a.nav{
     display: block;
@@ -86,9 +47,6 @@ li.nav a:hover:not(.active){
 .active{
     background-color: #ED7014;
 }
-.don{
-    background-color: #5B676D;
-}
 .sticky{
     position: fixed;
     top: 0;
@@ -98,7 +56,37 @@ li.nav a:hover:not(.active){
 .content{
     padding: 15px;
 }
-li a.d, .dropbtn{
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
     background-color = #333;
     display: inline-block;
     color: white;
@@ -108,7 +96,7 @@ li a.d, .dropbtn{
     cursor: pointer;
     font-family: Arial;
 }
-li a.d:hover, .dropdown:hover .dropbtn{
+li a:hover, .dropdown:hover .dropbtn{
     transition-duration: .4s;
     background-color: #ED7014;
 }
@@ -126,18 +114,20 @@ li.dropdown{
     z-index: 1;
 }
 
-.dropdown-content a.d{
+.dropdown-content a{
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a.d:hover{
-transition-duration: .4s;
-background-color: #ED7014}
+.dropdown-content a:hover{background-color: #ED7014}
 
 .dropdown:hover .dropdown-content{
-    display: block;}
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
 .overlay{
     height: 100%;
     width: 0%;
@@ -182,10 +172,6 @@ background-color: #ED7014}
     right: 35px;
     }
 }
-a.list{
-    color: black;
-    text-decoration: none;
-}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -209,13 +195,20 @@ a.list{
     background: #55ACEE;
     color: white;
 }
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 20px 25px 25px 0;
+}
 div.content{
     margin: 0 25px 0 25px;
 }
 </style>
 </head>
 <body>
-
 <script>
 window.onbeforeunload = function () {
       window.scrollTo(0, 0);
@@ -224,11 +217,10 @@ function openNav(){
     document.getElementById("cNav").style.width = "100%";
 }
 function closeNav(){
-    document.getElementById("cNav").style.width = "0";
+    document.getElementById("cNav").style.width = "0%";
 }
 </script>
-
-<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
 
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
@@ -243,13 +235,13 @@ function closeNav(){
         <a class = "d" href = "./../colorado/ColoradoLP.html">Colorado</a>
         <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
         <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
-        <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
-        <a class = "d" href = "New_YorkLP.html">New York</a>
+        <a class = "d" href = "CaliforniaLP.html">California</a>
+        <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
         <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
     </div>
 </li>
 <li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
-<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
 </ul>
 <div id = "cNav" class = "overlay">
     <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
@@ -261,8 +253,6 @@ function closeNav(){
 </div>
 
 <div class = "content">
-
-<h1>New York</h1>
 
 <script>
 window.onscroll = function() {stickToggle()};
@@ -281,36 +271,35 @@ function stickToggle(){
 }
 </script>
 
+<h1 class = "arial">Checkpoint: Napa Valley</h1>
+
 <div class = "top">
-    <div class = "imgL" style = "width: 45%; margin: 20px 10px 20px 0"><img src = "pic/statlib.jpg" width = "100%"></img></div>
-    <div class = "infoR" style = "width: 50%; margin: 15px 0 20px 10px"><p>Welcome to New York State! New York is known most of all for New York City, and for good reason. The city is
-    the most populated city in the country, and is home to around twice as many people as the next largest city in the country, Los Angeles.
+    <div class = "imgR" style = "margin: 20px 0 20px 10px; width: 45%"><img src = "pic/napavalleyg.JPG" width = "100%"></img></div>
+    <div class = "infoL" style = "margin: 10px 10px 20px 0; width: 50%"><p>You've now made it to Napa Valley, a part of California's Wine Country!
     <br /><br />
-    However, the state is only the fourth most populated state in the nation. How is this? Most of New York is rural, and sparsely populated. In fact, the greater New York City area is home
-    to around two-thirds of the state's population, with Long Island alone accounting for 39.6% of the state's entire population.
+    Napa Valley is considered one of the most premier wine regions in the United States, and even the world, and while there are records of wine production taking
+    place here from back in the nineteenth century, luxury wine production can only be traced back to the 1960's.
     <br /><br />
-    This city, however, has been extremely influential in the world. One of the many examples is the Stonewall Riots, a series of violent demonstrations against a police raid at the
-    Stonewall Inn in Greenwich Village. These riots are now considered among the most important events in the modern fight for LGBTQ+ rights.
+    Napa has the perfect combination of a Mediterranean climate, and proper geography and geology for the cultivation of wine grapes. Viticulture has suffered some setbacks
+    in the area, most notably an outbreak of phylloxera, a vine disease, as well as Prohibition and the Great Depression. However, it has perservered, and is now seen as
+    capable of producing wine on par with the very best of even Old World wines, in part a result of the results of the Paris Wine Tasting of 1976.
     <br /><br />
-    As far as influential people from the state of New York, there are too many to list. Frank Sinatra, Billy Joel, Paul Simon, F. Scott. Fitzgerald, Michael Jordan, as well as bands such as Steely Dan,
-    KISS, Twisted Sister, The Ramones, and Anthrax (all information courtesy of <a href = "https://en.wikipedia.org/wiki/New_York_(state)">Wikipedia.com (article on New York)</a>, and <a href = "https://en.wikipedia.org/wiki/List_of_people_from_New_York_(state)">Wikipedia.com (list of people from New York)</a>,
-    image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Statue_of_Liberty,_NY.jpg" title="via Wikimedia Commons">William Warby</a> / <a href="https://creativecommons.org/licenses/by/2.0">CC BY</a>).
+    Nowadays, Napa Valley is a quintessential destination for enotourism. Nearly 4.5 million people visit the Napa Valley each and every year. In fact, in 2010, TripAdvisor's
+    Travelers' Choice Awards named it "The World's Best Wine and Food Destination" (all information courtesy of <a href = "https://en.wikipedia.org/wiki/Napa_Valley_AVA">Wikipedia.com</a>,
+    image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Napa_Valley_grapes_Photo_D_Ramey_Logan_02.JPG" title="via Wikimedia Commons">Photograph by D Ramey Logan</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>).
     </p></div>
 </div>
 
-<h2>Routes:</h2>
-<div class = "r">
-<ul class = "indent">
-    <li><a href = "New_York_Route_1.html">Route 1</a></li>
-</ul>
-</div>
+<p><br /><br />
+To further explore Napa Valley, click <a href = "https://www.google.com/maps/@38.4275273,-122.3943331,3a,75y,279.6h,95.36t/data=!3m7!1e1!3m5!1sYIXflpLMLDE1fivZrvjaDQ!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3DYIXflpLMLDE1fivZrvjaDQ%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D101.20685%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
 
 <p>
 <br />
 <a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
 <a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
 <br />
-<button class = "button" onclick = "window.print()">Print this page</button>
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
 </p>
 
 </div>

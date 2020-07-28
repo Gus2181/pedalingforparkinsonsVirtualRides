@@ -3,63 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-<title>New York</title>
+<title>Finger Lakes</title>
 <style>
 body{
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
     line-height: 150%;
 }
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2{
-    margin-left: 25px;
-}
-div.top{
-    overflow: hidden;
-}
-div.imgL{
-    width: 300px;
-    float: left;
-    margin-left: 25px;
-}
-div.infoR{
-    float: right;
-    margin: 50px;
-    overflow: hidden;    
-}
-div.imgR{
-    width: 300px;
-    float: right;
-    margin-right: 50px;
-}
-div.infoL{
-    float: left;
-    margin: 25px;
-    margin-top: 25px;
-    overflow: hidden;    
-}
-div.r{
-    background-color: lightgray;
-    margin-left: 50px;
-    border: 25px solid #333;
-    color: #333;
-    padding: 15px;
-    width: 35%;
-}
-.indent{
-    margin-left: 25px;
-}
 .arial{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 img.head{
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
 }
 ul.navB{
     list-style-type: none;
@@ -67,10 +29,9 @@ ul.navB{
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    
 }
 li.nav{
-    float: left;
+    float:left;
 }
 a.nav{
     display: block;
@@ -86,9 +47,6 @@ li.nav a:hover:not(.active){
 .active{
     background-color: #ED7014;
 }
-.don{
-    background-color: #5B676D;
-}
 .sticky{
     position: fixed;
     top: 0;
@@ -98,7 +56,37 @@ li.nav a:hover:not(.active){
 .content{
     padding: 15px;
 }
-li a.d, .dropbtn{
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
     background-color = #333;
     display: inline-block;
     color: white;
@@ -108,7 +96,7 @@ li a.d, .dropbtn{
     cursor: pointer;
     font-family: Arial;
 }
-li a.d:hover, .dropdown:hover .dropbtn{
+li a:hover, .dropdown:hover .dropbtn{
     transition-duration: .4s;
     background-color: #ED7014;
 }
@@ -126,18 +114,20 @@ li.dropdown{
     z-index: 1;
 }
 
-.dropdown-content a.d{
+.dropdown-content a{
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a.d:hover{
-transition-duration: .4s;
-background-color: #ED7014}
+.dropdown-content a:hover{background-color: #ED7014}
 
 .dropdown:hover .dropdown-content{
-    display: block;}
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
 .overlay{
     height: 100%;
     width: 0%;
@@ -182,10 +172,6 @@ background-color: #ED7014}
     right: 35px;
     }
 }
-a.list{
-    color: black;
-    text-decoration: none;
-}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -209,13 +195,20 @@ a.list{
     background: #55ACEE;
     color: white;
 }
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 20px 25px 25px 0;
+}
 div.content{
     margin: 0 25px 0 25px;
 }
 </style>
 </head>
 <body>
-
 <script>
 window.onbeforeunload = function () {
       window.scrollTo(0, 0);
@@ -224,11 +217,10 @@ function openNav(){
     document.getElementById("cNav").style.width = "100%";
 }
 function closeNav(){
-    document.getElementById("cNav").style.width = "0";
+    document.getElementById("cNav").style.width = "0%";
 }
 </script>
-
-<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
+<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
 
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
@@ -249,7 +241,7 @@ function closeNav(){
     </div>
 </li>
 <li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
-<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
 </ul>
 <div id = "cNav" class = "overlay">
     <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
@@ -261,8 +253,6 @@ function closeNav(){
 </div>
 
 <div class = "content">
-
-<h1>New York</h1>
 
 <script>
 window.onscroll = function() {stickToggle()};
@@ -281,36 +271,35 @@ function stickToggle(){
 }
 </script>
 
+<h1 class = "arial">Checkpoint: Finger Lakes</h1>
+
 <div class = "top">
-    <div class = "imgL" style = "width: 45%; margin: 20px 10px 20px 0"><img src = "pic/statlib.jpg" width = "100%"></img></div>
-    <div class = "infoR" style = "width: 50%; margin: 15px 0 20px 10px"><p>Welcome to New York State! New York is known most of all for New York City, and for good reason. The city is
-    the most populated city in the country, and is home to around twice as many people as the next largest city in the country, Los Angeles.
+    <div class = "imgL" style = "width: 45%; margin: 20px 10px 20px 0"><img src = "pic/fingerlakes.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 50%; margin: 5px 0 20px 10px"><p>You've now made it to the Finger Lakes! The Finger Lakes refers to a group of 11 long, narrow lakes in New York
+    which are generally oriented north to south. Two of the lakes, Cayuga and Senega, are also some of the deepest in the United States, with depths of 435 and 618 feet respectively. And while
+    none of the lakes have a width exceeding 3.5 miles, Seneca Lake is 38.1 miles long.
     <br /><br />
-    However, the state is only the fourth most populated state in the nation. How is this? Most of New York is rural, and sparsely populated. In fact, the greater New York City area is home
-    to around two-thirds of the state's population, with Long Island alone accounting for 39.6% of the state's entire population.
+    The Finger Lakes are part of the Iroquois homeland. For nealy two centuries, the Iroquois were able to prevent colonization and displacement, which would often involve pitting the French against
+    the British. However, by the late 18th century, the French had left Canada, weakening Iroquois power, especially relative to the steadily increasing population of European-Americans. In additon
+    to this, there was internal strife, which eroded the political unity of the Iroquois. This led to a civil war amongst the Iroquois when during the American Revolutionary War, some sided with the
+    Bristish, and others with the Americans.
     <br /><br />
-    This city, however, has been extremely influential in the world. One of the many examples is the Stonewall Riots, a series of violent demonstrations against a police raid at the
-    Stonewall Inn in Greenwich Village. These riots are now considered among the most important events in the modern fight for LGBTQ+ rights.
-    <br /><br />
-    As far as influential people from the state of New York, there are too many to list. Frank Sinatra, Billy Joel, Paul Simon, F. Scott. Fitzgerald, Michael Jordan, as well as bands such as Steely Dan,
-    KISS, Twisted Sister, The Ramones, and Anthrax (all information courtesy of <a href = "https://en.wikipedia.org/wiki/New_York_(state)">Wikipedia.com (article on New York)</a>, and <a href = "https://en.wikipedia.org/wiki/List_of_people_from_New_York_(state)">Wikipedia.com (list of people from New York)</a>,
-    image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Statue_of_Liberty,_NY.jpg" title="via Wikimedia Commons">William Warby</a> / <a href="https://creativecommons.org/licenses/by/2.0">CC BY</a>).
+    Today, aside from being a tourist attraction, the Finger Lakes are home to thinks like wine and craft beer production. This area in fact produces more wine than anywhere else in New York, with over
+    100 wineries and vineyards. The great depth of the lakes provide a lake effect to the vinyards around their shores. In addition to that, the production of craft beer has exploded, with the number of
+    breweries doubling since 2012 (all information courtesy of <a href = "https://en.wikipedia.org/wiki/Finger_Lakes">Wikipedia.com</a>, image courtesy of <a href="https://commons.wikimedia.org/wiki/File:S._Main_Bench.jpg" title="via Wikimedia Commons">RochesterNY</a> / Public domain).
     </p></div>
 </div>
 
-<h2>Routes:</h2>
-<div class = "r">
-<ul class = "indent">
-    <li><a href = "New_York_Route_1.html">Route 1</a></li>
-</ul>
-</div>
+<p><br /><br />
+To further explore The Finger Lakes, click <a href = "https://www.google.com/maps/@42.7752563,-76.769573,3a,75y,142.1h,87.47t/data=!3m6!1e1!3m4!1sLifuI_fQHegDwmt6JMcw0Q!2e0!7i13312!8i6656">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
 
 <p>
 <br />
 <a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
 <a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
 <br />
-<button class = "button" onclick = "window.print()">Print this page</button>
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
 </p>
 
 </div>
