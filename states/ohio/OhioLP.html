@@ -196,6 +196,21 @@ a.list{
     color: black;
     text-decoration: none;
 }
+div.gMap{
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    z-index: 0;
+    margin-right: 80%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+div.cap{
+    height: 360px;
+    font-size: 25px;
+    text-align: center;   
+}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -234,7 +249,7 @@ function closeNav(){
 }
 </script>
 
-<h1><a href = "./../../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
+<h1><a href = "https://www.pedalingforparkinsons.org/"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
 
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
@@ -295,13 +310,61 @@ function stickToggle(){
     </div>
 </div>
 
-<h2>Routes:</h2>
-<div class = "r">
-<ul class = "indent">
-    <li><a class = "list" href = "Ohio_route_1.html">Route 1</a></li>
-    <li><a class = "list" href = "Ohio_route_2.html">Route 2</a></li>
-</ul>
-</div>
+
+<div id = "gmap" class = "gMap"></div>
+<div id = "capture" class = "cap"></div>
+<p><br /></p>
+<script>
+var map;
+var src = "https://docs.google.com/uc?id=1QoWp1di8s05ZbBje_epPXa2qZnXJIA7p&amp;export=kml";
+var src2 = "https://docs.google.com/uc?id=1wM_fwjJG3edT8VLsZbmhbAr5HXCPnlie&amp;export=kml";
+var src3 = "https://docs.google.com/uc?id=1hvlGiVe_8SA5GCo0mlFtmnFweJTwsAKu&amp;export=kml";
+var myLatLng = {lat: 40.720200, lng: -81.874237}
+
+function initMap(){
+    map = new google.maps.Map(document.getElementById("gmap"), {
+        center: myLatLng,
+        zoom: 11,
+        mapTypeId: 'terrain'
+    });
+    
+    var kmlLayer = new google.maps.KmlLayer(src, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    kmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = 'Ohio_route_1.html'>Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    
+    var kmlLayer2 = new google.maps.KmlLayer(src2, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    kmlLayer2.addListener('click', function(event) {
+        var content = "You've selected: <a href = 'Ohio_route_2.html'>Route 2</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    
+    var kmlLayer3 = new google.maps.KmlLayer(src3, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    kmlLayer3.addListener('click', function(event) {
+        var content = "You've selected: <a href = 'https://www.ohiotoerietrail.org/interactive-map/'>Route 3</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+}
+</script>
+<script async defer
+src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
+</script>
 
 
 <p>

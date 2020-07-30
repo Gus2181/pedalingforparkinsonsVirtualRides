@@ -204,6 +204,22 @@ a.list{
     color: black;
     text-decoration: none;
 }
+div.gMap{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    z-index: 0;
+    margin-right: 80%;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+div.cap{
+    height: 360px;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 75px;
+}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -270,7 +286,7 @@ function closeNav(){
     document.getElementById("cNav").style.width = "0%";
 }
 </script>
-<h1><a href = "./../BasicSite.html"><img class = "head" src = "pic/HeaderCropped.png"></img></a></h1>
+<h1><a href = "https://www.pedalingforparkinsons.org/"><img class = "head" src = "pic/HeaderCropped.png"></img></a></h1>
 
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../BasicSite.html">Home</a></li>
@@ -322,8 +338,153 @@ function stickToggle(){
 <div class = "content">
 
 <h1>Routes:</h1>
-<img class = "head" style = "width:95%;" src = "pic/america.jpg" alt = "map of the United States"></img>
-<p style = "margin: 10px;">This site offers an extensive amount of routes with a range in difficulty. While the daily exercise will remain similar,
+
+<div id = "gmap" class = "gMap"></div>
+<div id = "capture" class = "cap"></div>
+<p><br /></p>
+<script>
+var map;
+var OHsrc = "https://docs.google.com/uc?id=1QoWp1di8s05ZbBje_epPXa2qZnXJIA7p&amp;export=kml";
+var OHsrc2 = "https://docs.google.com/uc?id=1wM_fwjJG3edT8VLsZbmhbAr5HXCPnlie&amp;export=kml";
+var OHsrc3 = "https://docs.google.com/uc?id=1hvlGiVe_8SA5GCo0mlFtmnFweJTwsAKu&amp;export=kml";
+var CAsrc1 = "https://docs.google.com/uc?id=1X9vADlzw8c6OoiuMSGeFS0J0tRq_Hnqp&amp;export=kml";
+var CAsrc2 = "https://docs.google.com/uc?id=1ksd9R3yHpM5oqG_7gQoZ4Wq1BGXubBYA&amp;export=kml";
+var FLsrc = "https://docs.google.com/uc?id=1oYfKirGsjqzhIaJLFKDV4TOYCM0ti9vN&amp;export=kml";
+var IAsrc = "https://docs.google.com/uc?id=1MkAa3XEIVHPCk-7jjGq4Y06LoDWtU6Jv&amp;export=kml";
+var KYsrc = "https://docs.google.com/uc?id=1qHifA3t7TSaFe6GWAiXm0odm_ZiBuqtf&amp;export=kml";
+var NYsrc = "https://docs.google.com/uc?id=1xvnpECAJIPgwwcoCHnHMGxPn048K6J4H&amp;export=kml";
+var WAsrc = "https://docs.google.com/uc?id=1EALZT78WCIFc_9g5aLDQ65aBymlSS9Vs&amp;export=kml";
+var WAsrc2 = "https://docs.google.com/uc?id=1ZvjFMUDsoKRYjqW3C3PzNhQR632ReD37&amp;export=kml";
+
+var myLatLng = {lat: 40.720200, lng: -81.874237}
+
+function initMap(){
+    map = new google.maps.Map(document.getElementById("gmap"), {
+        center: myLatLng,
+        zoom: 11,
+        mapTypeId: 'terrain'
+    });
+    
+    var OHkmlLayer = new google.maps.KmlLayer(OHsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    OHkmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/ohio/Ohio_route_1.html'>Ohio Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    
+    var OHkmlLayer2 = new google.maps.KmlLayer(OHsrc2, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    OHkmlLayer2.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/ohio/Ohio_route_2.html'>Ohio Route 2</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    
+    var OHkmlLayer3 = new google.maps.KmlLayer(OHsrc3, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    OHkmlLayer3.addListener('click', function(event) {
+        var content = "You've selected: <a href = 'https://www.ohiotoerietrail.org/interactive-map/'>Ohio Route 3</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var CAkmlLayer1 = new google.maps.KmlLayer(CAsrc1, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    CAkmlLayer1.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/california/California_Route_1.html'>California Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var CAkmlLayer2 = new google.maps.KmlLayer(CAsrc2, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    CAkmlLayer2.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/california/California_Route_2.html'>California Route 2</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var FLkmlLayer = new google.maps.KmlLayer(FLsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    FLkmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/florida/Florida_Route_1.html'>Florida Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var IAkmlLayer = new google.maps.KmlLayer(IAsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    IAkmlLayer.addListener('click', function(event) {
+        var content = "You've selected <a href = './../states/iowa/Iowa_Route_1.html'>Iowa Route 1</a>"
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var KYkmlLayer = new google.maps.KmlLayer(KYsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    KYkmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/kentucky/Kentucky_Route_1.html'>Kentucky Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var NYkmlLayer = new google.maps.KmlLayer(NYsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    NYkmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/new_york/New_York_Route_1.html'>New York Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    var WAkmlLayer = new google.maps.KmlLayer(WAsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    WAkmlLayer.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/washington/Washington_Route_1.html'>Washington Route 1</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+    
+    var WAkmlLayer2 = new google.maps.KmlLayer(WAsrc2, {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+    });
+    WAkmlLayer2.addListener('click', function(event) {
+        var content = "You've selected: <a href = './../states/washington/Washington_Route_2.html'>Washington Route 2</a>";
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+}
+</script>
+<script async defer
+src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
+</script>
+
+<p style = "margin: 250px 10px 10px 10px;">This site offers an extensive amount of routes with a range in difficulty. While the daily exercise will remain similar,
 more difficult routes will cover many more miles, requiring many more days to be set aside in order to finish the route. Here, you can find
 the routes broken down both by state, as well as the length, in increasing order. (Map courtesy of <a href = "https://www.reddit.com/r/MapPorn/comments/88isaw/shaded_terrain_map_of_the_contiguous_united/">
 Reddit.com</a>)</p>
