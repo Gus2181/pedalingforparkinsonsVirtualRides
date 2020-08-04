@@ -254,7 +254,7 @@ function closeNav(){
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
 <li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
-<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="https://www.pedalingforparkinsons.org/classes">Cycling Recommendations</a></li>
 <li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
 <li class = "dropdown arial active">
     <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
@@ -356,7 +356,7 @@ function initMap(){
 src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
 </script>
 
-<p>How many miles have you ridden (Total for this ride)?</p>
+<p>How many miles have you ridden (This will be added to the total)?</p>
 <input type = "text" id = "userInput"></input>
 <button onclick = "t()">Submit</button>
 <button onclick = "setCookie('Wash1_numMiles', 0, 30)">Reset</button>
@@ -378,9 +378,13 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
  <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
  <script type="text/javascript">
  function t(){
-     var miles = document.getElementById("userInput").value;
-     setCookie("Wash1_numMiles", miles, 30);
-     pRoute(miles);
+     var cmiles = parseFloat(getCookie("Wash1_numMiles"));
+     var miles = parseFloat(document.getElementById("userInput").value);
+
+     cmiles = cmiles + miles;
+
+     setCookie("Wash1_numMiles", cmiles, 30);
+     pRoute(cmiles);
  }
  function setCookie(cname,cvalue,numdays) {
       if(cvalue == 0){

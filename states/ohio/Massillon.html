@@ -3,63 +3,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-<title>Florida</title>
+<title>Massillon</title>
 <style>
 body{
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
     line-height: 150%;
 }
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2{
-    margin-left: 25px;
-}
-div.top{
-    overflow: hidden;
-}
-div.imgL{
-    width: 300px;
-    float: left;
-    margin-left: 25px;
-}
-div.infoR{
-    float: right;
-    margin: 25px;
-    overflow: hidden;    
-}
-div.imgR{
-    width: 300px;
-    float: right;
-    margin-right: 50px;
-}
-div.infoL{
-    float: left;
-    margin: 25px;
-    margin-top: 25px;
-    overflow: hidden;    
-}
-div.r{
-    background-color: lightgray;
-    margin-left: 50px;
-    border: 25px solid #333;
-    color: #333;
-    padding: 15px;
-    width: 35%;
-}
-.indent{
-    margin-left: 25px;
-}
 .arial{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 img.head{
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;   
 }
 ul.navB{
     list-style-type: none;
@@ -67,10 +29,9 @@ ul.navB{
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    
 }
 li.nav{
-    float: left;
+    float:left;
 }
 a.nav{
     display: block;
@@ -86,9 +47,6 @@ li.nav a:hover:not(.active){
 .active{
     background-color: #ED7014;
 }
-.don{
-    background-color: #5B676D;
-}
 .sticky{
     position: fixed;
     top: 0;
@@ -98,7 +56,37 @@ li.nav a:hover:not(.active){
 .content{
     padding: 15px;
 }
-li a.d, .dropbtn{
+div.top{
+
+    overflow: hidden;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+    overflow: hidden;   
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
+}
+.don{
+    background-color: #5B676D;
+}
+li a, .dropbtn{
     background-color = #333;
     display: inline-block;
     color: white;
@@ -108,7 +96,7 @@ li a.d, .dropbtn{
     cursor: pointer;
     font-family: Arial;
 }
-li a.d:hover, .dropdown:hover .dropbtn{
+li a:hover, .dropdown:hover .dropbtn{
     transition-duration: .4s;
     background-color: #ED7014;
 }
@@ -126,18 +114,20 @@ li.dropdown{
     z-index: 1;
 }
 
-.dropdown-content a.d{
+.dropdown-content a{
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a.d:hover{
-transition-duration: .4s;
-background-color: #ED7014}
+.dropdown-content a:hover{background-color: #ED7014}
 
 .dropdown:hover .dropdown-content{
-    display: block;}
+    display: block;
+}
+.button{
+    margin: 12px 25px;    
+}
 .overlay{
     height: 100%;
     width: 0%;
@@ -182,25 +172,6 @@ background-color: #ED7014}
     right: 35px;
     }
 }
-a.list{
-    color: black;
-    text-decoration: none;
-}
-div.gMap{
-    height: 360px;
-    width: 100%;
-    overflow: hidden;
-    float: left;
-    z-index: 0;
-    margin-right: 80%;
-    margin-bottom: 20px;
-    margin-top: 50px;
-}
-div.cap{
-    height: 360px;
-    font-size: 25px;
-    text-align: center;   
-}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -224,13 +195,20 @@ div.cap{
     background: #55ACEE;
     color: white;
 }
+.gB{
+    border: 15px solid gray;
+    border-style: double solid double solid;
+}
+img.wrap{
+    float: left;
+    margin: 20px 25px 25px 0;
+}
 div.content{
     margin: 0 25px 0 25px;
 }
 </style>
 </head>
 <body>
-
 <script>
 window.onbeforeunload = function () {
       window.scrollTo(0, 0);
@@ -239,11 +217,10 @@ function openNav(){
     document.getElementById("cNav").style.width = "100%";
 }
 function closeNav(){
-    document.getElementById("cNav").style.width = "0";
+    document.getElementById("cNav").style.width = "0%";
 }
 </script>
-
-<h1><a href = "https://www.pedalingforparkinsons.org/"><img class = "head" src = "pic/HeaderCropped.png" alt = "Header" width = "70%"></img></a></h1>
+<h1><a href = "https://www.pedalingforparkinsons.org/"><img class = "head" src = "pic/HeaderCropped.png" width = "70%"></img></a></h1>
 
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
@@ -253,18 +230,18 @@ function closeNav(){
 <li class = "dropdown arial active">
     <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
     <div class = "dropdown-content">
-        <a class = "d" href = "./../ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "OhioLP.html">Ohio</a>
         <a class = "d" href = "./../washington/WashingtonLP.html">Washington</a>
         <a class = "d" href = "./../colorado/ColoradoLP.html">Colorado</a>
         <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
         <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
         <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
         <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
-        <a class = "d" href = "FloridaLP.html">Florida</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
     </div>
 </li>
 <li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
-<li style="float:right" class = "nav arial don"><a class = "nav" href="Donate.html">Donate</a></li>
+<li style="float:right" class = "nav arial don"><a class = "nav" href="./../../general/Donate.html">Donate</a></li>
 </ul>
 <div id = "cNav" class = "overlay">
     <a href = "#" class = "closeB" onclick = "closeNav()">&times;</a>
@@ -276,8 +253,6 @@ function closeNav(){
 </div>
 
 <div class = "content">
-
-<h1>Flordia</h1>
 
 <script>
 window.onscroll = function() {stickToggle()};
@@ -296,60 +271,34 @@ function stickToggle(){
 }
 </script>
 
+<h1 class = "arial">Checkpoint: Massillon</h1>
+
 <div class = "top">
-    <div class = "imgR" style = "width: 45%; margin: 20px 0 20px 10px"><img src = "pic/fLP.jpg" width = "100%"></img></div>
-    <div class = "infoL" style = "width: 50%; margin: 10px 10px 20px 0"><p>Welcome to the state of Florida! This state is known for its warm climate, luxurious beaches,
-    dangerous swamps, the Florida Reef, shown on the right (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Molasses11.jpg" title="via Wikimedia Commons">Jim Stuby</a> / Public domain),
-    and being the home of Disney World, but there are more interesting aspects of this state than that.
+    <div class = "imgL" style = "width: 45%; margin: 20px 0 20px 0"><img src = "pic/massillon.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 50%; margin: 10px 0 20px 0"><p>Welcome to Massillon, Ohio, the second largest incorporated territory in the Canton-Massillon, Ohio Metropolitan Statistical Area!
     <br /><br />
-    For example, the state boasts the only area in the United States which is bordered by two national parks, Greater Miami. These parks being the Everglades National Park, and the Biscayne
-    National Park. It also is home to Saint Augustine, the oldest European settlement in North America, as well as Cape Canaveral, America's launchpad for space flights.
+    The orginal settlement of Kendal was founded by a Quaker from New Bedford, Massachusetts, and Hartford Connecticut, Thomas Rotch. Later on, James Duncan arrived in Kendal, recording the plot for Massillon in
+    1826. The name comes from French Catholic Bishop Jean Baptiste Massillon, at the request of his wife. The plat itself was established on the east bank of the Tuscarawas River, the surveyed route of the Ohio and
+    Erie Canal. Massillon would quickly become a major port town along the canal route, after the canal itself was completed in 1832. The first telegraph lines would then reach Massillon in 1847, with railroads coming
+    in 1852.
     <br /><br />
-    Also of note is that Key West has the highest average temperature in the United States, though it is not the farthest south part of the U.S., that goes to Hawaii. Perhaps inspired
-    by this excessive heat and sun, a Miami Beach pharmacist, Bejamin Green, invented the first suntan cream in 1944, which was accomplished by cooking cocoa butter in a granite coffee
-    pot on a stove.
-    <br /><br />
-    In addition, Orlando attracts more visitors than any other destination for ammusement parks in the entire nation. This is most likely due to the abundance and variety of parks located here, including
-    the famed Magic Kingdom, Animal Kingdom, Epcot, Universal Studios Florida, which includes The Wizarding World of Harry Potter, and more (all information courtesy of <a href = "https://www.50states.com/facts/florida.htm">50states.com</a>).
+    Massillon has also been the home of several notable people, including R.E.M. drummer Bill Berry, Cincinnati Bengals owner Mike Brown, Iowa State Cyclones Head Coach Matt Campbell, former Oakland Raiders cornerback Gareon
+    Conley, MLB pitcher for the Detroit Tigers Dillon Dingler, suffragist Caroline McCullough Everhard, the first Black person to ever play in a college football bowl game Bobby Grier, the 1956 Sugar Bowl, Civil Rights activist
+    James Lawson, as well as several more others (all information courtesy of <a href = "https://en.wikipedia.org/wiki/Massillon%2C_Ohio">Wikipedia.com</a>, image courtesy of
+    <a href="https://commons.wikimedia.org/wiki/File:Massillon_Ohio.jpg" title="via Wikimedia Commons">Tim Kiser (w:User:Malepheasant)</a> / <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA</a>).
     </p></div>
 </div>
 
-<div id = "gmap" class = "gMap"></div>
-<div id = "capture" class = "cap"></div>
-<p><br /></p>
-<script>
-var map;
-var src = "https://docs.google.com/uc?id=1oYfKirGsjqzhIaJLFKDV4TOYCM0ti9vN&amp;export=kml";
-var myLatLng = {lat: 26.368305, lng: -80.128929}
-
-function initMap(){
-    map = new google.maps.Map(document.getElementById("gmap"), {
-        center: myLatLng,
-        zoom: 11,
-        mapTypeId: 'terrain'
-    });
-    var kmlLayer = new google.maps.KmlLayer(src, {
-        suppressInfoWindows: true,
-        preserveViewport: false,
-        map: map
-    });
-    kmlLayer.addListener('click', function(event) {
-        var content = "You've selected: <a href = 'Florida_Route_1.html'>Route 1</a>";
-        var testimonial = document.getElementById('capture');
-        testimonial.innerHTML = content;
-    });
-}
-</script>
-<script async defer
-src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
-</script>
+<p><br /><br />
+To further explore Massillon, click <a href = "https://www.google.com/maps/@40.8014698,-81.5237603,3a,75y,75.06h,102.87t/data=!3m6!1e1!3m4!1swDkY3AMqohxg66Si0A5cbg!2e0!7i16384!8i8192">here</a>
+<br />Pedaling for Parkinsons claims no affiliation with Google Street View</p>
 
 <p>
 <br />
 <a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
 <a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
 <br />
-<button class = "button" onclick = "window.print()">Print this page</button>
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
 </p>
 
 </div>

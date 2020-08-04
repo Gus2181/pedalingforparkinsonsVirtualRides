@@ -248,7 +248,7 @@ function closeNav(){
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../../BasicSite.html">Home</a></li>
 <li class = "nav arial"><a class = "nav" href="./../../general/PFPInfo.html">About PFP</a></li>
-<li class = "nav arial"><a class = "nav" href="./../../general/Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="https://www.pedalingforparkinsons.org/classes">Cycling Recommendations</a></li>
 <li class = "nav arial"><a class = "nav" href="./../../general/Contact.html">Contact Us</a></li>
 <li class = "dropdown arial active">
     <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
@@ -323,17 +323,17 @@ var map;
 var src = "https://docs.google.com/uc?id=1EALZT78WCIFc_9g5aLDQ65aBymlSS9Vs&amp;export=kml";
 var src2 = "https://docs.google.com/uc?id=1ZvjFMUDsoKRYjqW3C3PzNhQR632ReD37&amp;export=kml";
 
-var myLatLng = {lat: 47.608013, lng: -122.335167}
+var myLatLng = {lat: 47.97913, lng: -122.19589}
 
 function initMap(){
     map = new google.maps.Map(document.getElementById("gmap"), {
         center: myLatLng,
-        zoom: 5,
+        zoom: 7,
         mapTypeId: 'terrain'
     });
     var kmlLayer = new google.maps.KmlLayer(src, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     kmlLayer.addListener('click', function(event) {
@@ -344,7 +344,7 @@ function initMap(){
     
     var kmlLayer2 = new google.maps.KmlLayer(src2, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     kmlLayer2.addListener('click', function(event) {
