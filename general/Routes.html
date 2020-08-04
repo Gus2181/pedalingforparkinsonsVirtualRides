@@ -291,7 +291,7 @@ function closeNav(){
 <ul class = "navB" id = "navBar">
 <li class = "nav arial"><a class = "nav" href="./../BasicSite.html">Home</a></li>
 <li class = "nav arial"><a class = "nav" href="PFPInfo.html">About PFP</a></li>
-<li class = "nav arial"><a class = "nav" href="Recommendations.html">Cycling Recommendations</a></li>
+<li class = "nav arial"><a class = "nav" href="https://www.pedalingforparkinsons.org/classes">Cycling Recommendations</a></li>
 <li class = "nav arial"><a class = "nav" href="Contact.html">Contact Us</a></li>
 <li class = "dropdown arial active">
     <a href="Routes.html" class = "dropbtn">Routes</a>
@@ -346,7 +346,7 @@ function stickToggle(){
 var map;
 var OHsrc = "https://docs.google.com/uc?id=1QoWp1di8s05ZbBje_epPXa2qZnXJIA7p&amp;export=kml";
 var OHsrc2 = "https://docs.google.com/uc?id=1wM_fwjJG3edT8VLsZbmhbAr5HXCPnlie&amp;export=kml";
-var OHsrc3 = "https://docs.google.com/uc?id=1hvlGiVe_8SA5GCo0mlFtmnFweJTwsAKu&amp;export=kml";
+var OHsrc3 = "https://docs.google.com/uc?id=1sHCk9fcgc9S4IKQtO19ImmeacN4_jZKF&amp;export=kml";
 var CAsrc1 = "https://docs.google.com/uc?id=1X9vADlzw8c6OoiuMSGeFS0J0tRq_Hnqp&amp;export=kml";
 var CAsrc2 = "https://docs.google.com/uc?id=1ksd9R3yHpM5oqG_7gQoZ4Wq1BGXubBYA&amp;export=kml";
 var FLsrc = "https://docs.google.com/uc?id=1oYfKirGsjqzhIaJLFKDV4TOYCM0ti9vN&amp;export=kml";
@@ -356,18 +356,18 @@ var NYsrc = "https://docs.google.com/uc?id=1xvnpECAJIPgwwcoCHnHMGxPn048K6J4H&amp
 var WAsrc = "https://docs.google.com/uc?id=1EALZT78WCIFc_9g5aLDQ65aBymlSS9Vs&amp;export=kml";
 var WAsrc2 = "https://docs.google.com/uc?id=1ZvjFMUDsoKRYjqW3C3PzNhQR632ReD37&amp;export=kml";
 
-var myLatLng = {lat: 40.720200, lng: -81.874237}
+var myLatLng = {lat: 38.1236, lng: -98.1225}
 
 function initMap(){
     map = new google.maps.Map(document.getElementById("gmap"), {
         center: myLatLng,
-        zoom: 11,
+        zoom: 4,
         mapTypeId: 'terrain'
     });
     
     var OHkmlLayer = new google.maps.KmlLayer(OHsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     OHkmlLayer.addListener('click', function(event) {
@@ -378,7 +378,7 @@ function initMap(){
     
     var OHkmlLayer2 = new google.maps.KmlLayer(OHsrc2, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     OHkmlLayer2.addListener('click', function(event) {
@@ -389,7 +389,7 @@ function initMap(){
     
     var OHkmlLayer3 = new google.maps.KmlLayer(OHsrc3, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     OHkmlLayer3.addListener('click', function(event) {
@@ -399,7 +399,7 @@ function initMap(){
     });
     var CAkmlLayer1 = new google.maps.KmlLayer(CAsrc1, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     CAkmlLayer1.addListener('click', function(event) {
@@ -409,7 +409,7 @@ function initMap(){
     });
     var CAkmlLayer2 = new google.maps.KmlLayer(CAsrc2, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     CAkmlLayer2.addListener('click', function(event) {
@@ -419,7 +419,7 @@ function initMap(){
     });
     var FLkmlLayer = new google.maps.KmlLayer(FLsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     FLkmlLayer.addListener('click', function(event) {
@@ -429,7 +429,7 @@ function initMap(){
     });
     var IAkmlLayer = new google.maps.KmlLayer(IAsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     IAkmlLayer.addListener('click', function(event) {
@@ -439,7 +439,7 @@ function initMap(){
     });
     var KYkmlLayer = new google.maps.KmlLayer(KYsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     KYkmlLayer.addListener('click', function(event) {
@@ -449,7 +449,7 @@ function initMap(){
     });
     var NYkmlLayer = new google.maps.KmlLayer(NYsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     NYkmlLayer.addListener('click', function(event) {
@@ -459,7 +459,7 @@ function initMap(){
     });
     var WAkmlLayer = new google.maps.KmlLayer(WAsrc, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     WAkmlLayer.addListener('click', function(event) {
@@ -470,7 +470,7 @@ function initMap(){
     
     var WAkmlLayer2 = new google.maps.KmlLayer(WAsrc2, {
         suppressInfoWindows: true,
-        preserveViewport: false,
+        preserveViewport: true,
         map: map
     });
     WAkmlLayer2.addListener('click', function(event) {
@@ -512,6 +512,7 @@ the routes broken down both by state, as well as the length, in increasing order
             <li><a href = "./../states/ohio/Ohio_route_2.html">Ohio Route 2(208.2)</a></li>
             <li><a href = "./../states/california/California_Route_1.html">California Route 1(292.3)</a></li>
             <li><a href = "./../states/california/California_Route_2.html">California Route 2(308.2)</a></li>
+            <li><a href = "./../states/ohio/Ohio_route_3.html">Ohio Route 3(326)</a></li>
             <li><a href = "./../states/iowa/Iowa_Route_1.html">Iowa Route 1(357.6)</a></li>
             <li><a href = "./../states/new_york/New_York_Route_1.html">New York Route 1(517.2)</a></li>
             <li><a href = "./../states/colorado/TRAD.html">T-RAD (N/A)</a></li>

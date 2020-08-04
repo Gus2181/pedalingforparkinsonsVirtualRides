@@ -2,26 +2,76 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="math.js" type="text/javascript"></script>
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-<title>Florida Route 1</title>
+<title>Ohio Route 3</title>
 <style>
 body{
     margin: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
-    line-height: 150%;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    margin-left: 25px;
+}
+div.imgL{
+    width: 300px;
+    float: left;
+    margin-left: 25px;
+}
+div.infoR{
+    float: right;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+div.top{
+    overflow: hidden;
+}
+div.imgR{
+    float: right;
+    margin-right: 50px;
+}
+div.infoL{
+    float: left;
+    margin: 50px;
+
+    overflow: hidden;    
+}
+div.check{
+    float: left;
+    margin: 0 0 50px 50px;
+    width: 45%;
+    overflow: hidden;  
+}
+div.info{
+    float: right;
+    background-color: lightgray;
+    margin: 50px 10px 50px 0;
+    padding: 20px;
+    border: 15px solid gray;
+    border-style: double solid double solid;
+    width: 575px;
+    overflow: hidden;    
+}
+.indent{
+    margin-left: 25px;
 }
 .arial{
     font-family: Arial, Helvetica, sans-serif;
 }
-
 img.head{
     display: block;
     margin-left: auto;
-    margin-right: auto;   
+    margin-right: auto;
 }
 ul.navB{
     list-style-type: none;
@@ -29,9 +79,10 @@ ul.navB{
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    
 }
 li.nav{
-    float:left;
+    float: left;
 }
 a.nav{
     display: block;
@@ -47,6 +98,9 @@ li.nav a:hover:not(.active){
 .active{
     background-color: #ED7014;
 }
+.don{
+    background-color: #5B676D;
+}
 .sticky{
     position: fixed;
     top: 0;
@@ -55,43 +109,6 @@ li.nav a:hover:not(.active){
 }
 .content{
     padding: 15px;
-}
-div.top{
-
-    overflow: hidden;
-}
-div.imgL{
-    width: 300px;
-    float: left;
-    margin-left: 25px;
-}
-div.infoR{
-    float: right;
-    margin: 50px;
-
-    overflow: hidden;    
-}
-div.imgR{
-    float: right;
-    margin-right: 50px;
-}
-div.infoL{
-    float: left;
-    margin: 50px;
-
-    overflow: hidden;    
-}
-div.check{
-    float: right;
-    margin: 0 0 50px 10px;
-    width: 45%;
-    overflow: hidden;  
-}
-.indent{
-    margin-left: 25px;
-}
-.don{
-    background-color: #5B676D;
 }
 li a.d, .dropbtn{
     background-color = #333;
@@ -127,14 +144,12 @@ li.dropdown{
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover{background-color: #ED7014}
+.dropdown-content a.d:hover{
+transition-duration: .4s;
+background-color: #ED7014}
 
 .dropdown:hover .dropdown-content{
-    display: block;
-}
-.button{
-    margin: 12px 25px;    
-}
+    display: block;}
 .overlay{
     height: 100%;
     width: 0%;
@@ -179,6 +194,9 @@ li.dropdown{
     right: 35px;
     }
 }
+div.content{
+    margin: 0 25px 0 25px;
+}
 .fa{
     padding: 20px;
     font-size: 20px;
@@ -186,7 +204,7 @@ li.dropdown{
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    margin-left: 0;
+    margin-left: 25px;
     border-radius: 50%;
 }
 .fa:hover{
@@ -195,23 +213,11 @@ li.dropdown{
 }
 .fa-facebook{
     background: #3B5998;
-    margin-right: 25px;
     color: white;
 }
 .fa-twitter{
     background: #55ACEE;
     color: white;
-}
-.gB{
-    border: 15px solid gray;
-    border-style: double solid double solid;
-}
-img.wrap{
-    float: left;
-    margin: 0 25px 25px 0;
-}
-div.content{
-    margin: 0 25px 0 25px;
 }
 div.gMap{
     height: 360px;
@@ -241,8 +247,8 @@ div.cap{
 <body onload = "checkCookie()">
 <script>
 window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    }
+    window.scrollTo(0, 0);
+  }
 function openNav(){
     document.getElementById("cNav").style.width = "100%";
 }
@@ -260,14 +266,14 @@ function closeNav(){
 <li class = "dropdown arial active">
     <a href="./../../general/Routes.html" class = "dropbtn">Routes</a>
     <div class = "dropdown-content">
-        <a class = "d" href = "./../ohio/OhioLP.html">Ohio</a>
+        <a class = "d" href = "OhioLP.html">Ohio</a>
         <a class = "d" href = "./../washington/WashingtonLP.html">Washington</a>
         <a class = "d" href = "./../colorado/ColoradoLP.html">Colorado</a>
         <a class = "d" href = "./../kentucky/KentuckyLP.html">Kentucky</a>
         <a class = "d" href = "./../iowa/IowaLP.html">Iowa</a>
         <a class = "d" href = "./../california/CaliforniaLP.html">California</a>
         <a class = "d" href = "./../new_york/New_YorkLP.html">New York</a>
-        <a class = "d" href = "FloridaLP.html">Florida</a>
+        <a class = "d" href = "./../florida/FloridaLP.html">Florida</a>
     </div>
 </li>
 <li class = "nav arial"><a class = "nav" href = "#" onclick = "openNav()">More</a></li>
@@ -283,6 +289,8 @@ function closeNav(){
 </div>
 
 <div class = "content">
+
+<h1>Route #3 (326m)</h1>
 
 <script>
 window.onscroll = function() {stickToggle()};
@@ -301,27 +309,27 @@ function stickToggle(){
 }
 </script>
 
-<h1 class = "arial">Route #1 (170.5m)</h1>
-
-<img src = "pic/fr1.jpg" style = "width: 100%; margin: 20px 0 20px 0"></img>
-
 <div class = "top">
-    <div class = "infoL" style = "width: 70%; margin: 0 10px 20px 0"><p>This route takes riders through a part of florida. Specifically, it goes down the eastern
-    coastline and into the keys. The western coast and interior parts of florida aren't visited in this route.
+    <div class = "imgL" style = "width: 45%; margin: 20px 10px 20px 0"><img src = "pic/oetrail.jpg" width = "100%"></img></div>
+    <div class = "infoR" style = "width: 50%; margin: 20px 0 20px 10px"><p>Welcome to the third route in the state of Ohio! Unlike some of the other routes in this state,
+    this travels the entire state, covering an entire 326 miles!
     <br /><br />
-    This route is 170.5 miles long, not extraordinaly long by any means, but it may take a few days for riders to complete. This is all dependent on how comfortable
-    the rider is with biking in general. Someone who has been cycling for a long time may be able to complete this route in a few days, whereas less experienceed riders
-    may take much longer. No matter your level of comfort, make sure to take breaks when you need, pace yourself appropriately, and be safe
-    (image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Castillo_de_San_Marcos_Fort_Panorama_1.jpg" title="via Wikimedia Commons">I, Jonathan Zander</a> / <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>).
+    Specifically, this route goes on the Ohio to Erie Trail, a route specifically for non-motorists which travels from Cincinnatti to Lake Erie. These trails are meant for
+    cyclists and hikers, but some trails on the rotue additionally permit equestrian, as well as horse and buggy travel.
+    <br /><br />
+    This official site for the Ohio to Erie trail (which can be found <a href = "https://www.ohiotoerietrail.org/">here</a>) includes several itineraries for those looking to do
+    the route in anywhere from 3 to 8 days. For the purposes of this site, we will be doing the 4 day ride. In total, this route is 323 miles, making it quite long. As a resulg, this
+    specific route may take a fair amount of time to complete (all information on trail courtesy of <a href = "https://en.wikipedia.org/wiki/Ohio_to_Erie_Trail">Wikipedia.com</a>,
+    image courtesy of <a href="https://commons.wikimedia.org/wiki/File:Ohio_and_Erie_Canal_Towpath_Trail_Section.jpg" title="via Wikimedia Commons">Kevin Payravi</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA</a>)
     </p></div>
-    <div class = "check" style = "width: 25%">
-        <h2 style = "margin-top: 20px;">Checkpoints:</h2>
+        <div class = "check">
+        <h2>Checkpoints:</h2>
         <ol>
-            <li><a href = "Boca_Raton.html">Boca Raton (21.1m to next)</a></li>
-            <li><a href = "Fort_Lauderdale.html">Fort Lauderdale (35.1m to next)</a></li>
-            <li><a href = "Miami_Beach.html">Maimi Beach (74.7m to next)</a></li>
-            <li><a href = "Key_Largo.html">Key Largo (39.6m to next)</a></li>
-            <li><a href = "Duck_Key.html">Duck Key (end)</a></li>
+            <li><a href = "Cincinnati.html">Cincinatti Riverfront (76m to next)</a></li>
+            <li><a href = "Cedarville.html">Cedarville (102m to next)</a></li>
+            <li><a href = "Mt_Vernon_OH.html">Mount Vernon (78m to next)</a></li>
+            <li><a href = "Massillon.html">Massillon (70m to next)</a></li>
+            <li><a href = "Cleveland.html">Cleveland Lakefront (end)</a></li>
         </ol>
     </div>
 </div>
@@ -331,9 +339,8 @@ function stickToggle(){
 <p><br /></p>
 <script>
 var map;
-var src = "https://docs.google.com/uc?id=1oYfKirGsjqzhIaJLFKDV4TOYCM0ti9vN&amp;export=kml";
-var myLatLng = {lat: 26.368305, lng: -80.128929}
-
+var src = "https://docs.google.com/uc?id=1sHCk9fcgc9S4IKQtO19ImmeacN4_jZKF&amp;export=kml";
+var myLatLng = {lat: 40.720200, lng: -81.874237}
 function initMap(){
     map = new google.maps.Map(document.getElementById("gmap"), {
         center: myLatLng,
@@ -355,10 +362,11 @@ function initMap(){
 <script async defer
 src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99P185-b_5gA&callback=initMap">
 </script>
+
 <p>How many miles have you ridden (This will be added to the total)?</p>
 <input type = "text" id = "userInput"></input>
 <button onclick = "t()">Submit</button>
-<button onclick = "setCookie('Florida1_numMiles', 0, 30)">Reset</button>
+<button onclick = "setCookie('Ohio3_numMiles', 0, 30)">Reset</button>
 <p style = "margin:0"><br /></p>
 <div id = "progress">
     <div id = "bar"><p id = "barLabel" style = "padding-left: 15px;">0%</p></div>
@@ -366,24 +374,23 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
 <p id = "message">Oh no! You have not completed any miles!</p>
 
 <p id = "town"></p>
-
 <p>
 <br />
 <a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
 <a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
 <br />
-<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
+<button class = "indent button" onclick = "window.print()">Print this page</button>
 </p>
  
  <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
  <script type="text/javascript">
  function t(){
-     var cmiles = parseFloat(getCookie("Florida1_numMiles"));
+     var cmiles = parseFloat(getCookie("Ohio3_numMiles"));
      var miles = parseFloat(document.getElementById("userInput").value);
 
      cmiles = cmiles + miles;
 
-     setCookie("Florida1_numMiles", cmiles, 30);
+     setCookie("Ohio3_numMiles", cmiles, 30);
      pRoute(cmiles);
  }
  function setCookie(cname,cvalue,numdays) {
@@ -415,7 +422,7 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
  
  function checkCookie()
  {
- var miles=getCookie("Florida1_numMiles");
+ var miles=getCookie("Ohio3_numMiles");
  if (miles!="" && miles != null)
    {
         displayBar(miles);
@@ -424,7 +431,7 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
  }
  var i = 0;
  function displayBar(m){
-     var length = 170.5;
+     var length = 326;
      var perc = (m/length)*100;
      
      var bar = document.getElementById("bar");
@@ -472,26 +479,26 @@ src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkrZdZ1m7qO52wox6Ud7l99
  }
  
  function pRoute(m){
-     var tot = 170.5;
-     var to4 = 74.7;
-     var to3 = 56.2;
-     var to2 = 21.1;
+     var tot = 326;
+     var to4 = 256;
+     var to3 = 178;
+     var to2 = 76;
      
      var town = document.getElementById("town");
      if(m >= tot){
-         town.innerHTML = "You've made it to the end of the race, and are in <a href = 'Duck_Key.html'>Duck Key</a>!"
+         town.innerHTML = "You've made it to the end of the race, and are in the <a href = 'Cleveland.html'>Cleveland Lakefront</a>!"
      } else if(m >= to4){
-         town.innerHTML = "You've made it to <a href = 'Key_Largo.html'>Key Largo</a>!"
+         town.innerHTML = "You've made it to <a href = 'Massillon.html'>Massillon</a>!"
      } else if(m >= to3){
-         town.innerHTML = "You've made it to <a href = 'Miami_Beach.html'>Miami Beach</a>!"
+         town.innerHTML = "You've made it to <a href = 'Mt_Vernon_OH.html'>Mount Vernon</a>!"
      } else if(m >= to2){
-         town.innerHTML = "You've made it to <a href = 'Fort_Lauderdale.html'>Fort Lauderdale</a>!"
+         town.innerHTML = "You've made it to <a href = 'Cedarville.html'>Cedarville</a>!"
      } else{
-         town.innerHTML = "You haven't made it to any checkpoints, and have still most recently been in <a href = 'Boca_Raton.html'>Boca Raton</a>!"
+         town.innerHTML = "You haven't made it to any checkpoints, and have still most recently been in the <a href = 'Cincinnati.html'>Cincinatti Riverfront</a>!"
      }
  }
-</script>
  
+ </script>
 </div>
 </body>
 </html>
