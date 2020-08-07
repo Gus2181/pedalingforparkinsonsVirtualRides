@@ -147,7 +147,7 @@ li.dropdown{
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
-    margin-left: 25px;
+    margin-left: 0;
     border-radius: 50%;
 }
 .fa:hover{
@@ -155,12 +155,16 @@ li.dropdown{
     opacity: .7;
 }
 .fa-facebook{
+    margin-right: 25px;
     background: #3B5998;
     color: white;
 }
 .fa-twitter{
     background: #55ACEE;
     color: white;
+}
+div.content{
+    margin: 0 25px 0 25px;
 }
 </style>
 </head>
@@ -210,7 +214,7 @@ function closeNav(){
 
 <div class = "content">
 
-<h1 class = "arial indent">Every Bit Helps</h1>
+<h1 class = "arial">Every Bit Helps</h1>
 
 <script>
 window.onscroll = function() {stickToggle()};
@@ -229,8 +233,8 @@ function stickToggle(){
 }
 </script>
 
-<p><img class = "head" src = "pic/morning.PNG" width = "75%"></img></p>
-<p class = "indent"><br /><br />Every donation goes to helping to fund the research of parkinson's disease, and how aerobic exercise can help to
+<p><img class = "head" src = "pic/ridegroup2.jpg" width = "100%"></img></p>
+<p><br /><br />Every donation goes to helping to fund the research of parkinson's disease, and how aerobic exercise can help to
 alleviate its symptoms. No matter how large or small a donation is, it helps to further the cause of combatting parkinson's through exercise
 rather than medication. We thank you for each and every dollar donated.
 <br /><br />To make your donation, go to the <a href = "https://www.pedalingforparkinsons.org/donate">Pedaling For Parkinson's Donate Page</a>.
@@ -240,7 +244,7 @@ rather than medication. We thank you for each and every dollar donated.
 <a href = "https://www.facebook.com/pedalingforparkinsons2012/" class = "fa fa-facebook"></a>
 <a href = "https://twitter.com/PedalforPD" class = "fa fa-twitter"></a>
 <br />
-<button class = "indent button" onclick = "window.print()">Print this page</button>
+<button class = "button" style = "margin-left: 0" onclick = "window.print()">Print this page</button>
 </p>
 </div>
 </body>
